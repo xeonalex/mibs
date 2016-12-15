@@ -1,15 +1,36 @@
-/*$jeet: (
-  gutter: 3,
-  max-width: 1170px,
-  layout-direction: LTR,
-  parent-first: false
-);*/
-
-/*.container{
+.container {
+    max-width: 1140px;
     @include clearfix;
-    @include center();
-    padding: {
-        right: 10px;
-        left: 10px;
+    padding:  {
+        right: 15px;
+        left: 15px;
     }
-}*/
+}
+body {
+    font-family: "effraregular";
+    // color: #fff;
+}
+.btn {
+    font-family: "effrabold";
+    font-size: em(12px);
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 31px;
+    @include border-radius($radius: 2px);
+}
+.btn-red {
+    background: $red;
+}
+.btn-grey {
+    background: $dark-grey;
+    padding: 7px 31px;
+}
+.btn-tr {
+    background: transparent;
+    padding: 7px 34px;
+}
+.btn-tr-big {
+    background: transparent;
+    padding: 18px 30px;
+}
