@@ -1,0 +1,145 @@
+.enroll {
+	background-color: $blue;
+	@include clearfix;
+	.container {
+		line-height: 1;
+		text-align: justify;
+		font-size: 0;
+	    padding: 28.3px 15px;
+		&:after {
+			display: inline-block;
+			content: '';
+			height: 0;
+			width: 100%;
+		}
+	}
+}
+
+.enroll_title {
+	color: #fff;
+	font-size: 36px;
+	display: inline-block;
+	font-weight: 400;
+	vertical-align: middle;
+}
+
+.enroll_form {
+	vertical-align: middle;
+	display: inline-block;
+	@include clearfix;
+	font-size: 16px;
+	// внутренние
+	.enroll_label {
+		display: block;
+		float: left;
+		@include border-radius($radius: 2px);
+		background-color: #fff;
+		padding: 12.6px 18px;
+		line-height: 1;
+	}
+	.enroll_label_text{
+		font-size: 14px;
+	}
+	.enroll_tel {
+		width: 211px;
+		border: none;
+		padding-left: 20px;
+		&:focus {
+			outline: none;
+		}
+	}
+	.enroll_submit {
+		 @extend .btn;
+		 @extend .btn-red;
+		 padding: 17px 31px;
+		 border: none;
+		 outline: none;
+		 margin-left: -2px;
+		 line-height: 1;
+	}
+}
+
+
+// mobile
+//
+//
+@include breakpoint(1024) {
+	.enroll_title {
+		font-size: 30px;
+	}
+	.enroll_form {
+		.enroll_label {
+
+		}
+		.enroll_label_text{
+		}
+		.enroll_tel {
+			width: 156px;
+			padding-left: 10px;
+		}
+		.enroll_submit {
+
+		}
+	}
+}
+@include breakpoint(768) {
+	.enroll {
+		.container {
+			padding: 21.9px 15px;
+		}
+	}
+
+	.enroll_title {
+		font-size: 30px;
+		width: 250px;
+		text-align: left;
+	}
+	.enroll_form {
+		.enroll_label {
+		    padding: 12.6px 16px;
+		}
+		.enroll_label_text{
+		}
+		.enroll_tel {
+			width: 118px;
+		}
+		.enroll_submit {
+
+		}
+	}
+}
+@include breakpoint(320) {
+	.enroll {
+		.container {
+		    padding: 36px 15px;
+		}
+	}
+	.enroll_title {
+		display: block;
+		text-align: center;
+		font-size: 24px;
+		width: 100%;
+		margin-bottom: 32px;
+	}
+	.enroll_form {
+		display: block;
+		.enroll_label {
+			display: block;
+			width: 100%;
+			float: none;
+			padding: 12.6px 18px;
+		}
+		.enroll_label_text{
+		}
+		.enroll_tel {
+			width: 190px;
+			padding-left: 20px;
+		}
+		.enroll_submit {
+			width: 100%;
+			display: block;
+			margin-left: 0;
+			margin-top: 10px;
+		}
+	}
+}

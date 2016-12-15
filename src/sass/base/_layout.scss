@@ -1,13 +1,6 @@
-.container {
-    max-width: 1200px;
-    @include clearfix;
-    padding:  {
-        right: 15px;
-        left: 15px;
-    }
-}
 body {
     font-family: "effraregular";
+    min-width: 1200px;
     // color: #fff;
 }
 .btn {
@@ -33,4 +26,52 @@ body {
 .btn-tr-big {
     background: transparent;
     padding: 18px 30px;
+}
+
+
+.container {
+    width: 1200px;
+    @include clearfix;
+    margin: 0 auto;
+    padding {
+        left: 15px;
+        right: 15px;
+    }
+}
+
+@include breakpoint(1024) {
+    body{
+        min-width: 1024px;
+    }
+    .container {
+        width: 1024px;
+        padding {
+            left: 42px;
+            right: 42px;
+        }
+    }
+}
+@include breakpoint(768) {
+    body{
+        min-width: 768px;
+    }
+    .container {
+        width: 768px;
+        padding {
+            left: 20px;
+            right: 20px;
+        }
+    }
+}
+@include breakpoint(320) {
+    body{
+        min-width: 320px;
+    }
+    .container {
+        width: 320px;
+        padding {
+            left: 20px;
+            right: 20px;
+        }
+    }
 }
