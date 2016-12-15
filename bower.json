@@ -22,7 +22,8 @@
     "jquery": "latest",
     "normalize-css": "latest",
     "owl.carousel": "latest",
-    "bootstrap-grid-only": "latest"
+    "bootstrap-grid-only": "latest",
+    "jquery.maskedinput": "^1.4.1"
   },
   "devDependencies": {
     "reset-css": "latest",
