@@ -101,7 +101,7 @@ gulp.task('sass-dev', function() {
       errLogToConsole: true,
       sourcemaps : false
       }))
-    .pipe(gcmq())
+    //.pipe(gcmq())
     .on('error', sass.logError)
     .pipe(autoprefixer({
       browsers: ['last 15 versions'],

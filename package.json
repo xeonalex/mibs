@@ -1,14 +1,14 @@
 {
-  "name": "Salem",
+  "name": "mibs",
   "version": "0.0.1",
-  "description": "Boilerplate",
+  "description": "mibs project",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xeonalex/salem.git"
+    "url": "https://github.com/xeonalex/mibs.git"
   },
   "author": "",
   "license": "ISC",
