@@ -1,6 +1,6 @@
 body {
     font-family: "effraregular";
-    min-width: 1200px;
+    min-width: 1240px;
     // color: #fff;
 }
 .btn {
@@ -30,12 +30,12 @@ body {
 
 
 .container {
-    width: 1200px;
+    width: 1240px;
     @include clearfix;
     margin: 0 auto;
-    padding {
-        left: 15px;
-        right: 15px;
+    padding: {
+        left: 35px;
+        right: 35px;
     }
 }
 
@@ -45,7 +45,7 @@ body {
     }
     .container {
         width: 1024px;
-        padding {
+        padding: {
             left: 42px;
             right: 42px;
         }
@@ -57,7 +57,7 @@ body {
     }
     .container {
         width: 768px;
-        padding {
+        padding: {
             left: 20px;
             right: 20px;
         }
@@ -69,7 +69,7 @@ body {
     }
     .container {
         width: 320px;
-        padding {
+        padding: {
             left: 20px;
             right: 20px;
         }
