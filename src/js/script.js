@@ -9,3 +9,10 @@ $('.enroll_tel').mask("+9 (999) 999-99-99");
 $('.about_more-link').click(function(){
 	$('.about_content').toggleClass('about_full');
 })
+
+//
+// БЛОК НОВОСТЕЙ
+//
+$('.slider-wrap').bxSlider({
+
+});
