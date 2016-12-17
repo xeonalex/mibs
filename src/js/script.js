@@ -18,6 +18,14 @@ $( document ).ready(function() {
         });
         return false;
     });
+    $('.location-header').on('click',function(){
+        $('.header__popup-city').bPopup({
+            transition: 'slideBack',
+            transitionClose: 'slideIn',
+            closeClass:'popup-close'
+        });
+        return false;
+    });
 
     $('.search-label').click(function(){
         $('.search-m').toggleClass('input-focus');
@@ -50,7 +58,10 @@ $( document ).ready(function() {
 
 
     $('.plus').click(function(){
-        $(this).toggleClass('minus').toggleClass('no-b').next().slideToggle();
+        $(this).toggleClass('minus')
+        .toggleClass('no-b')
+        .next()
+        .slideToggle();
     });
 
 
@@ -64,6 +75,12 @@ $( document ).ready(function() {
         }
     });
 
+
+    $('.after-plus .city-link').click(function(event){
+        event.preventDefault();
+        $(this).next().slideToggle();
+        $(this).toggleClass('pb0');
+    });
 
 
 

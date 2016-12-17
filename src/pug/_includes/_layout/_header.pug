@@ -155,13 +155,35 @@ header.header
                         | EN
     
 
-
-
-
+    .header__sign-in
+         .sign-in-wrap
+            .container
+                .logo-wrap
+                    a.logo-link(href="#")
+                        img.logo-img(src="img/logo.svg", alt="")
+                .nav
+                    ul.nav-list
+                        li.nav-item
+                            a(href="#")
+                                | Услуги и цены              
+                        li.nav-item
+                            a(href="#")
+                                | Врачи          
+                        li.nav-item
+                            a(href="#")
+                                | Контакты 
+                .phone-wrap
+                    a.phone(href="tel:+7(812)244-00-24")
+                        |+7 (812) 244-00-24
+                    span.time
+                        | ежедневно с 7.00 до 23.00
+                .signUp-wrap
+                    a.enroll_link(href="#")
+                        | Записаться на прием
 
 
 .header__popup-wrap
-    .container
+    .container-popup
         p.popup-title
             | Региональные центры ЛДЦ МИБС:
         span.popup-subtitle
@@ -411,12 +433,10 @@ header.header
 
 
 //- ==============================
-
-
 .header__popup-city
-    .container
+    .container-short
         .city-search
-            form
+            form.city-search-from-wrap
                 .city-search-wrap
                     input.search-city(type='text', 
                                 id="search",
@@ -428,23 +448,65 @@ header.header
                     li.city-item.bold
                         a.city-link(href="#")
                             | Санкт-Петербург
-                        input(type='radio', 
+                        input.city-radio(type='radio', 
                                 class="radio", 
-                                id="radio")
-                        label.city-radio(for="radio")
+                                name="radio")
                     li.city-item.bold
                         a.city-link(href="#")
                             | Москва
-                        input(type='radio', 
-                                        class="radio", 
-                                        id="radio")
-                        label.city-radio(for="radio")
+                        input.city-radio(type='radio', 
+                              name="radio",
+                              class="radio")
                     li.city-item.bold
                         a.city-link(href="#")
                             | Московская область
-                        input(type='radio', 
-                                        class="radio", 
-                                        id="radio")
-                        label.city-radio(for="radio")
-
+                        input.city-radio(type='radio', 
+                              name="radio",
+                              class="radio")
+                    li.city-item.after-plus
+                        a.city-link(href="#")
+                            span
+                                | А
+                        ul.city-sub-list
+                            li
+                                a(href="#")
+                                    | Архангельск
+                                input(type='radio', 
+                                                name="radio",
+                                                class="radio")
+                            li
+                                a(href="#")
+                                    | Астрахань
+                                input(type='radio', 
+                                                name="radio",
+                                                class="radio")
+                    li.city-item.after-plus
+                        a.city-link(href="#")
+                            span
+                                | Б
+                        ul.city-sub-list
+                            li
+                                a(href="#")
+                                    | Белгород
+                                input(type='radio', 
+                                                name="radio",
+                                                class="radio")
+                            li
+                                a(href="#")
+                                    | Бийск
+                                input(type='radio', 
+                                                name="radio",
+                                                class="radio")
+                            li
+                                a(href="#")
+                                    | Белгород
+                                input(type='radio', 
+                                                name="radio",
+                                                class="radio")
+                            li
+                                a(href="#")
+                                    | Бийск
+                                input(type='radio', 
+                                                name="radio",
+                                                class="radio")
 
