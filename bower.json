@@ -19,10 +19,12 @@
     "960-grid-system": "latest",
     "bourbon": "latest",
     "bPopup": "bpopup#latest",
-    "jquery": "latest",
+    "jquery": "1.12",
     "normalize-css": "latest",
     "owl.carousel": "latest",
-    "bootstrap-grid-only": "latest"
+    "bootstrap-grid-only": "latest",
+    "jquery.maskedinput": "^1.4.1",
+    "jQuery": "1.12.0"
   },
   "devDependencies": {
     "reset-css": "latest",

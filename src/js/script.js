@@ -1,7 +1,4 @@
 console.log('hello from script.js');
-
-
-
 $( document ).ready(function() {
     $('.adress-title').click(function(){
         $('.adress-wrap').toggleClass('adress-wrap--active');
@@ -77,5 +74,22 @@ $( document ).ready(function() {
 
 
 
+
+});
+// Блок "запишитесь"
+$('.enroll_tel').mask("+9 (999) 999-99-99");
+
+//
+// Блок "Лечебно-диагностический центр"
+//
+
+$('.about_more-link').click(function(){
+	$('.about_content').toggleClass('about_full');
+})
+
+//
+// БЛОК НОВОСТЕЙ
+//
+$('.slider-wrap').bxSlider({
 
 });
