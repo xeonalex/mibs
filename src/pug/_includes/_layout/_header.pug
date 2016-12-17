@@ -182,6 +182,185 @@ header.header
                     a.enroll_link(href="#")
                         | Записаться на прием
 
+    .intro-wrapper
+        .container
+            .tabs-wrap
+                .tabs-list
+                    ul
+                        li.tabs-item.tabs-item--active.mrt(data-tab="mrt")
+                            a.tablink(href="#")
+                                | МРТ
+                        li.tabs-item.kt(data-tab="kt")
+                            a.tablink(href="#")
+                                | КТ
+                        li.tabs-item.yam(data-tab="yam")
+                            a.tablink(href="#")
+                                | Ядерная медицина <br>
+                                | (ПЭТ-КТ/ОФЭКТ)
+                        li.tabs-item.other(data-tab="other")
+                            a.tablink(href="#")
+                                | Другие услуги
+                .tabs-content
+                    //- .tabs-item--active
+                    #mrt.tab.mrt
+                        li.tabs-item.tabs-item--active.mrt(data-tab="mrt")
+                            a.tablink(href="#")
+                                | МРТ
+                        .tab-wrapper
+                            .mrt-list
+                                ul
+                                    li  
+                                        a(href="#")
+                                            | МРТ брюшной полости и забрюшинного <br> пространства
+                                    li  
+                                        a(href="#")
+                                            | МРТ головного мозга
+                                    li  
+                                        a(href="#")
+                                            | Магнитно-резонансная ангиография
+                                    li  
+                                        a(href="#")
+                                            | МРТ позвоночника
+                                    li  
+                                        a(href="#")
+                                            | МРТ мягких тканей
+                                    li  
+                                        a(href="#")
+                                            | МРТ суставов
+                                    li  
+                                        a(href="#")
+                                            | МРТ органов малого таза у женщин
+                                    li  
+                                        a(href="#")
+                                            | МРТ молочных желез
+                                    li  
+                                        a(href="#")
+                                        |  МРТ органов малого таза у мужчин
+                                    li  
+                                        a(href="#")
+                                            | МРТ органов мошонки и паховых каналов
+
+                            .mrt-dscr
+                                p
+                                    | Томографический способ исследования внутренних органов и тканей использованием явления ядерного магнитного резонанса. Томографический способ исследования внутренних органов и тканей использованием явления ядерного магнитного резонанса.
+                                a(href="#")
+                                    | Все услуги
+                    #kt.tab.kt
+                        li.tabs-item.kt(data-tab="kt")
+                            a.tablink(href="#")
+                                | КТ
+                        .tab-wrapper
+                            .mrt-list
+                                ul
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                                    li  
+                                        a(href="#")
+                                            | КТ
+                    #yam.tab.yam
+                        li.tabs-item.yam(data-tab="yam")
+                            a.tablink(href="#")
+                                | Ядерная медицина <br>
+                                | (ПЭТ-КТ/ОФЭКТ)
+                        .tab-wrapper
+                            .mrt-list
+                                ul
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                                    li  
+                                        a(href="#")
+                                            | Ядерная медицина
+                    #other.tab.other
+                        li.tabs-item.other(data-tab="other")
+                            a.tablink(href="#")
+                                | Другие услуги
+                        .tab-wrapper
+                            .mrt-list
+                                ul
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+                                    li  
+                                        a(href="#")
+                                            | Другие услуги
+
+
+
+                    
 
 .header__popup-wrap
     .container-popup
@@ -512,6 +691,16 @@ header.header
                                                 class="radio")
 
 .header__popup-signUp
+    img.popup-close(src="img/icons/close-l.png", alt="")
     .container-short
         p.signUp-title
             | Записать на прием
+        form
+            label(for="name")
+                | Ваше имя
+            input(type="text")
+            label(for="name")
+                | Телефон
+            input(type="tel")
+            button.enroll_link(type="submit")
+                | Записаться на прием

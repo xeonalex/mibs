@@ -21,6 +21,13 @@ $( document ).ready(function() {
     $('.location-header').on('click',function(){
         $('.header__popup-city').bPopup({
             transition: 'slideBack',
+            transitionClose: 'slideIn'
+        });
+        return false;
+    });
+    $('.signUp-wrap .enroll_link').on('click',function(){
+        $('.header__popup-signUp').bPopup({
+            transition: 'slideBack',
             transitionClose: 'slideIn',
             closeClass:'popup-close'
         });
@@ -83,6 +90,18 @@ $( document ).ready(function() {
     });
 
 
+    $('.tabs-list .tabs-item').click(function openCity() {
+        var tab = $(this).data('tab');
+        $('.tab').css('display','none');
+        $('.tabs-list .tabs-item--active').removeClass('tabs-item--active');
+        $(this).addClass('tabs-item--active');
+        $("#"+ tab).css('display','block');
+    });
+
+
+    $('.tabs-content .tab .tabs-item').click(function(){
+        $(this).next().slideToggle();
+    });
 
 
 

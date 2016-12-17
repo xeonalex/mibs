@@ -1,15 +1,6 @@
 *{
     box-sizing: border-box;
 }
-.container {
-    @include clearfix;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding:  {
-        right: 15px;
-        left: 15px;
-    }
-}
 body {
     font-family: "effraregular";
     min-width: 1240px;
