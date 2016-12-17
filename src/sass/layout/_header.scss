@@ -203,7 +203,6 @@ body {
         border-bottom: 1px dashed #fff;
         color: #fff;
         position: relative;
-        padding-right: 10px;
         &:after {
             content: "";
             position: absolute;
@@ -244,6 +243,9 @@ body {
 .header {
     .location {
         &-wrap {
+            float: left;
+            margin-right: 10px;
+            padding: 0 18px;
             &:hover {
                 background: #1a6eb4;
             }
@@ -252,10 +254,7 @@ body {
 }
 .location {
     &-wrap {
-        float: left;
-        margin-right: 10px;
         font-size: 14px;
-        padding: 0 18px;
     }
     &-title {
         // margin-right: 5px;
@@ -273,9 +272,12 @@ body {
     }
     &-city {
         text-decoration: none;
-        border-bottom: 1px dashed #fff;
         color: #fff;
         position: relative;
+        padding-right: 12px;
+        span {
+            border-bottom: 1px dashed #fff;
+        }
         &:after {
             content: "";
             position: absolute;
@@ -283,7 +285,7 @@ body {
             width: 6px;
             height: 3px;
             top: 10px;
-            right: -12px;
+            right: 0;
         }
     }
     &-map {
