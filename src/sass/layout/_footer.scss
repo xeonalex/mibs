@@ -23,11 +23,14 @@
 	}
 }
 .footer {
+	font-size: 14px;
 	.telephone {
+		vertical-align: middle;
 		padding-left: 33px;
 		font-family: 'effra';
 		color: #fff;
-		display: block;
+		display: inline-block;
+		display: table-cell;
 		position: relative;
 		line-height: 1;
 		&:before {
@@ -54,6 +57,8 @@
 		}
 	}
 	.enroll_link {
+		vertical-align: middle;
+		display: table-cell;
 		border: 1px solid #fff;
 		@include t25();
 		&:hover {
@@ -62,50 +67,86 @@
 		}
 	}
 	.location-wrap {
+		vertical-align: middle;
+		display: inline-block;
+		display: table-cell;
 		color: #fff;
 		.location-title:before {
 		    background: url(../img/icons/location_blue.png);
 		}
 	}
+	.socials-block {
+		display: inline-block;
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 14px;
+		color: #fff;
+	}
+	.left_line1,
+	.left_line2,
+	.left_line3 {
+	}
+	.left_line1,
+	.left_line2{
+		margin-bottom: 60px;
+	}
 }
 .socials-block {
-	.socials-text {
 
+	.socials-text {
+		vertical-align: middle;
+		margin-right: 12px;
 	}
 }
 .socials-list{
 	list-style: none;
+	display: inline-block;
+	vertical-align: middle;
 	.socials-item{
 		float: left;
+		text-align: center;
 	}
 	.social-link {
-	    background-image: url(../img/icons/socials/socials.png);
-        background-repeat: no-repeat;
-        text-indent: -9999px;
+		font-size: 0;
         display: block;
-		&._vk{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 2px solid #fff;
+        @include border-radius(50%);
+        &:after{
+        	font-size: 14px;
+        	content: '';
+			display: inline-block;
+			line-height: 40px;
+			vertical-align: middle;
+		    background-image: url(../img/icons/socials/socials.png);
+	        background-repeat: no-repeat;
+        }
+		&._vk:after{
 			width: 19px;
 			height: 9px;
 			background-position: -5px -105px;
 		}
-		&._insta{
+		&._insta:after{
 			width: 16px;
 			height: 16px;
 			background-position: -5px -53px;
 		}
-		&._fb{
+		&._fb:after{
 			width: 8px;
 			height: 14px;
 			background-position: -5px -5px;
 		}
 		&:hover{
-			&._vk{
+			background-color: #fff;
+			&._vk:after{
 				background-position: -5px -124px;
 			}
-			&._insta{
+			&._insta:after{
 				background-position: -5px -79px;
 			}
-			&._fb{
+			&._fb:after{
 				background-position: -5px -29px;
 			}
 		}
