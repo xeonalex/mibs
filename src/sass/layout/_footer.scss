@@ -127,6 +127,7 @@
         height: 40px;
         line-height: 40px;
         border: 2px solid #fff;
+        @include t25();
         @include border-radius(50%);
         &:after{
         	font-size: 14px;
@@ -154,6 +155,7 @@
 		}
 		&:hover{
 			background-color: #fff;
+			border-color: transparent;
 			&._vk:after{
 				background-position: -5px -124px;
 			}
@@ -342,6 +344,7 @@
 				text-align: center;
 				line-height: 20px;
 				margin-bottom: 26px;
+				padding: 0 20px;
 			}
 			.other-links a {
 				color: #fff;
