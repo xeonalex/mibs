@@ -238,15 +238,21 @@ body {
         }
     }
 }
+.header {
+    .location {
+        &-wrap {
+            &:hover {
+                background: #1a6eb4;
+            }
+        }
+    }
+}
 .location {
     &-wrap {
         float: left;
         margin-right: 10px;
         font-size: 14px;
         padding: 0 18px;
-        &:hover {
-            background: #1a6eb4;
-        }
     }
     &-title {
         // margin-right: 5px;
@@ -258,7 +264,7 @@ body {
             background: url(../img/icons/location.png);
             width: 11px;
             height: 16px;
-            top: 2px;
+            top: 0px;
             left: 2px;
         }
     }
