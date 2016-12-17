@@ -1,10 +1,450 @@
-- var list = ["О нас", "Новости", "Отзывы", "Партнеры"]
+- var menu_items = ["О нас", "Новости", "Отзывы", "Партнеры"]
 
 header.header
-    .container
-        .header__top-line
-            span.version
+    .header__top-line
+        .container
+            .menu-adaprive-wrap
+                .menu-toggle
+                    .icon 
+                        #nav-icon
+                            span
+                            span
+                            span
+                    a.full(href="#")
+                        | Меню
+                a(href="#").telephone 
+                    | 8(812)244-00-24
+                .location-header
+                    a(href="#")
+                        img(src="img/icons/location-b.png", alt="")
+                #mySidenav.sidenav
+                    //- a.closebtn(href='javascript:void(0)')
+                    ul.sidenav-list
+                        li.sidenav-item
+                            a(href='#').lvlin Услуги и цены
+                            ul.sub-list
+                                li
+                                    a(href="#").back
+                                        | Назад
+                                li
+                                    a.plus(href="#")
+                                        | Лучевая диагностика
+                                    ul.accor-list
+                                        li
+                                            a(href="#")   
+                                                | МРТ
+                                        li
+                                            a(href="#")   
+                                                | КТ
+                                        li.active
+                                            a(href="#")   
+                                                | ПЭТ/КТ
+                                        li
+                                            a(href="#")   
+                                                | ОФЭКТ
+                                        li
+                                            a(href="#")   
+                                                | Маммография
+                                        li
+                                            a(href="#")   
+                                                | Рентген
+                                        li
+                                            a(href="#")   
+                                                | УЗИ
+
+                                li
+                                    a.plus(href="#")
+                                        | Эпилептология, и сомнология
+                                    ul.accor-list
+                                        li
+                                            a(href="#")   
+                                                | МРТ
+                                        li
+                                            a(href="#")   
+                                                | КТ
+                                        li.active
+                                            a(href="#")   
+                                                | ПЭТ/КТ
+                                        li
+                                            a(href="#")   
+                                                | ОФЭКТ
+                                        li
+                                            a(href="#")   
+                                                | Маммография
+                                        li
+                                            a(href="#")   
+                                                | Рентген
+                                        li
+                                            a(href="#")   
+                                                | УЗИ
+                                li
+                                    a(href="#")
+                                        | Центр мужского здоровья и онкоурологии
+                                li
+                                    a(href="#")
+                                        | Стереотаксическая биопсия
+                                li
+                                    a(href="#") 
+                                        | Второе мнение
+                        li.sidenav-item
+                            a(href='#') Врачи
+                        li.sidenav-item
+                            a(href='#') Контакты
+                        li.sidenav-item
+                            a(href='#') О нас
+                        li.sidenav-item
+                            a(href='#').sidenav--active Новости
+                        li.sidenav-item
+                            a(href='#') Отзывы
+                        li.sidenav-item
+                            a(href='#') Партнеры
+                        .search-input
+                            .search-content
+                                form
+                                    .search-wrap
+                                        input.search(type='text', 
+                                                    id="search",
+                                                    name='search',
+                                                    placeholder='Введите текст для поиска')
+                                        button.btn-search-h(type="submit") Найти
+                        .version-wrap
+                            a(href="#").version-h
+                                | Версия для слабовидящих
+            a(href="#").version
                 | Версия для слабовидящих
-            ul.header_menu__list
-                li.menu__item
-                    a.menu__link(href="#")
+            ul.header__menu_list
+                each item in menu_items                
+                    if item == "Партнеры"
+                        li.header__menu_item
+                            a.header__menu_link.header__menu_link--active(href="#")
+                                span=item
+                    else
+                        li.header__menu_item
+                            a.header__menu_link(href="#")
+                                span=item
+            .loupe-wrap
+                form
+                    label.search-label(for="search")
+                    .search-wrap
+                        input.search-m(type='text', 
+                                       id="search",
+                                       name='search',
+                                       placeholder='Поиск')
+                        button.btn-search(type="submit") Найти
+                //- img.loupe-img(src="img/icons/loupe.png", alt="")
+            .adress-wrap
+                a(href="#").adress-title
+                    | Адреса клиник 
+                .adress-map
+                    ul
+                        li 6-я Советская, дом 24-26
+                        li 6-я Советская, дом 24-26
+                        li 6-я Советская, дом 24-26
+                        li 6-я Советская, дом 24-26
+                        li 6-я Советская, дом 24-26
+            .location-wrap
+                span(href="#").location-title  
+                    | Ваш город:  
+                a.location-city(href="#")
+                    | Санкт-Петербург
+            .flags-wrap
+                a(href="#").country
+                    | RU
+                .flags-country
+                    a(href="#")
+                        | EN
+    
+
+
+
+
+
+
+.header__popup-wrap
+    .container
+        p.popup-title
+            | Региональные центры ЛДЦ МИБС:
+        span.popup-subtitle
+            | 91 центр в 68 городах
+        .popup-close
+            img(src="img/icons/close.png", alt="")
+        .popup-content
+            ul
+                li.bold
+                    a(href="#")
+                        | Санкт-Петербург
+                li.bold
+                    a(href="#")
+                        | Москва
+                li.bold
+                    a(href="#")
+                        | Московская область
+                li.letter
+                    span
+                        | А 
+                    a(href="#")
+                        | Архангельск
+                li
+                    a(href="#")
+                        | Астрахань
+                li.letter
+                    span
+                        | Б
+                    a(href="#")
+                        | Барнаул
+                li
+                    a(href="#")
+                        | Белгород
+                li
+                    a(href="#")
+                        | Бийск
+                li.letter
+                    span
+                        | В
+                    a(href="#")
+                        | Владимир
+                li
+                    a(href="#")
+                        | Волгоград
+                li
+                    a(href="#")
+                        | Вологда
+                li
+                    a(href="#")
+                        | Воронеж
+                li.letter
+                    span
+                        | Е
+                    a(href="#")
+                        | Екатеринбург
+                li
+                    a(href="#")
+                        | Ереван
+                li.letter
+                    span
+                        | И
+                    a(href="#")
+                        | Иваново
+                li
+                    a(href="#")
+                        | Ижевск
+                li.letter
+                    span
+                        | К
+                    a(href="#")
+                        | Казань
+                li
+                    a(href="#")
+                        | Калининград
+                li
+                    a(href="#")
+                        | Калуга
+                li
+                    a(href="#")
+                        | Кемерово
+                li
+                    a(href="#")
+                        | Киев
+                li
+                    a(href="#")
+                        | Киров
+                li
+                    a(href="#")
+                        | Кисловодск
+                li
+                    a(href="#")
+                        | Кострома
+                li
+                    a(href="#")
+                        | Краснодар
+                li
+                    a(href="#")
+                        | Красноярск
+                li
+                    a(href="#")
+                        | Курган
+                li
+                    a(href="#")
+                        | Курск
+                li.letter
+                    span
+                        | Л
+                    a(href="#")
+                        | Липецк
+                li.letter
+                    span
+                        | М
+                    a(href="#")
+                        | Магнитогорск
+                li
+                    a(href="#")
+                        | Мурманск
+                li.letter
+                    span
+                        | Н
+                    a(href="#")
+                        | Набережные Челны
+                li
+                    a(href="#")
+                        | Нижневартовск
+                li
+                    a(href="#")
+                        | Нижний Новгород
+                li
+                    a(href="#")
+                        | Нижний Тагил
+                li
+                    a(href="#")
+                        | Новокузнецк
+                li
+                    a(href="#")
+                        | Новосибирск
+                li.letter
+                    span
+                        | О
+                    a(href="#")
+                        | Одесса
+                li
+                    a(href="#")
+                        | Омск
+                li
+                    a(href="#")
+                        | Оренбург
+                li
+                    a(href="#")
+                        | Орск
+                li.letter
+                    span
+                        | П
+                    a(href="#")
+                        | Пенза
+                li
+                    a(href="#")
+                        | Пермь
+                li
+                    a(href="#")
+                        | Псков
+                li.letter
+                    span
+                        | Р
+                    a(href="#")
+                        | Ростов-на-Дону
+                li
+                    a(href="#")
+                        | Рязань
+                li.letter
+                    span
+                        | С
+                    a(href="#")
+                        | Самара
+                li
+                    a(href="#")
+                        | Саранск
+                li
+                    a(href="#")
+                        | Саратов
+                li
+                    a(href="#")
+                        | Смоленск
+                li
+                    a(href="#")
+                        | Сочи
+                li
+                    a(href="#")
+                        | Ставрополь
+                li
+                    a(href="#")
+                        | Старый Оскол
+                li
+                    a(href="#")
+                        | Стерлитамак
+                li
+                    a(href="#")
+                        | Сызрань
+                li.letter
+                    span
+                        | Т
+                    a(href="#")
+                        | Тамбов
+                li
+                    a(href="#")
+                        | Тверь
+                li
+                    a(href="#")
+                        | Тольятти
+                li
+                    a(href="#")
+                        | Томск
+                li
+                    a(href="#")
+                        | Тула
+                li
+                    a(href="#")
+                        | Тюмень
+                li.letter
+                    span
+                        | У
+                    a(href="#")
+                        | Улан-Удэ
+                li
+                    a(href="#")
+                        | Ульяновск
+                li
+                    a(href="#")
+                        | Уфа
+                li.letter
+                    span
+                        | Ч
+                    a(href="#")
+                        | Чебоксары
+                li
+                    a(href="#")
+                        | Челябинск
+                li
+                    a(href="#")
+                        | Череповец
+                li.letter
+                    span
+                        | Я
+                    a(href="#")
+                        | Ярославль
+
+
+//- ==============================
+
+
+.header__popup-city
+    .container
+        .city-search
+            form
+                .city-search-wrap
+                    input.search-city(type='text', 
+                                id="search",
+                                name='search',
+                                placeholder='Поиск')
+                    button.btn-search-c(type="submit") Найти
+            form
+                ul.city-list
+                    li.city-item.bold
+                        a.city-link(href="#")
+                            | Санкт-Петербург
+                        input(type='radio', 
+                                class="radio", 
+                                id="radio")
+                        label.city-radio(for="radio")
+                    li.city-item.bold
+                        a.city-link(href="#")
+                            | Москва
+                        input(type='radio', 
+                                        class="radio", 
+                                        id="radio")
+                        label.city-radio(for="radio")
+                    li.city-item.bold
+                        a.city-link(href="#")
+                            | Московская область
+                        input(type='radio', 
+                                        class="radio", 
+                                        id="radio")
+                        label.city-radio(for="radio")
+
+
