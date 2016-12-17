@@ -1,0 +1,114 @@
+.footer {
+	background: rgb(65,77,88); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(65,77,88,1) 1%, rgba(65,77,88,1) 50%, rgba(60,72,81,1) 50%, rgba(60,72,81,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(65,77,88,1) 1%,rgba(65,77,88,1) 50%,rgba(60,72,81,1) 50%,rgba(60,72,81,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(65,77,88,1) 1%,rgba(65,77,88,1) 50%,rgba(60,72,81,1) 50%,rgba(60,72,81,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414d58', endColorstr='#3c4851',GradientType=1 ); /* IE6-9 */
+
+	.container{
+
+	}
+}
+.footer-left,
+.footer-right {
+	padding: {
+		top:30px;
+		bottom: 30px;
+	}
+}
+.footer-left {
+	.logo-footer{
+		display: inline-block;
+		width: 240px;
+	}
+}
+.footer {
+	.telephone {
+		padding-left: 33px;
+		font-family: 'effra';
+		color: #fff;
+		display: block;
+		position: relative;
+		line-height: 1;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 18px;
+			height: 30px;
+			background: {
+				image: url('../img/icons/mobile.svg');
+				repeat: no-repeat;
+				size: cover;
+			}
+		}
+		.number {
+			font-size: 24px;
+			display: block;
+		}
+		.work-time{
+			font-size: 14px;
+			display: block;
+		}
+	}
+	.enroll_link {
+		border: 1px solid #fff;
+		@include t25();
+		&:hover {
+			background-color: #fff;
+			color: $footer-dark;
+		}
+	}
+	.location-wrap {
+		color: #fff;
+		.location-title:before {
+		    background: url(../img/icons/location_blue.png);
+		}
+	}
+}
+.socials-block {
+	.socials-text {
+
+	}
+}
+.socials-list{
+	list-style: none;
+	.socials-item{
+		float: left;
+	}
+	.social-link {
+	    background-image: url(../img/icons/socials/socials.png);
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        display: block;
+		&._vk{
+			width: 19px;
+			height: 9px;
+			background-position: -5px -105px;
+		}
+		&._insta{
+			width: 16px;
+			height: 16px;
+			background-position: -5px -53px;
+		}
+		&._fb{
+			width: 8px;
+			height: 14px;
+			background-position: -5px -5px;
+		}
+		&:hover{
+			&._vk{
+				background-position: -5px -124px;
+			}
+			&._insta{
+				background-position: -5px -79px;
+			}
+			&._fb{
+				background-position: -5px -29px;
+			}
+		}
+	}
+}
+
