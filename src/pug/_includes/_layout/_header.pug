@@ -180,7 +180,7 @@ header.header
                     span.time
                         | ежедневно с 7.00 до 23.00
                 .signUp-wrap
-                    a.enroll_link(href="#")
+                    a.enroll_link.jsEnrollInit(href="#")
                         | Записаться на прием
 
     .intro-wrapper
@@ -210,34 +210,34 @@ header.header
                         .tab-wrapper
                             .mrt-list
                                 ul
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ брюшной полости и забрюшинного <br> пространства
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ головного мозга
-                                    li  
+                                    li
                                         a(href="#")
                                             | Магнитно-резонансная ангиография
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ позвоночника
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ мягких тканей
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ суставов
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ органов малого таза у женщин
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ молочных желез
-                                    li  
+                                    li
                                         a(href="#")
                                         |  МРТ органов малого таза у мужчин
-                                    li  
+                                    li
                                         a(href="#")
                                             | МРТ органов мошонки и паховых каналов
 
@@ -253,34 +253,34 @@ header.header
                         .tab-wrapper
                             .mrt-list
                                 ul
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
-                                    li  
+                                    li
                                         a(href="#")
                                             | КТ
                     #yam.tab.yam
@@ -291,34 +291,34 @@ header.header
                         .tab-wrapper
                             .mrt-list
                                 ul
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
-                                    li  
+                                    li
                                         a(href="#")
                                             | Ядерная медицина
                     #other.tab.other
@@ -328,40 +328,40 @@ header.header
                         .tab-wrapper
                             .mrt-list
                                 ul
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
-                                    li  
+                                    li
                                         a(href="#")
                                             | Другие услуги
 
 
 
-                    
+
 
 .header__popup-wrap
     .container-popup
@@ -702,7 +702,7 @@ header.header
             input(type="text")
             label(for="name")
                 | Телефон
-            input(type="tel")
+            input.tel_mask(type="tel")
             button.enroll_link(type="submit")
                 | Записаться на прием
 .signIn-form-tr

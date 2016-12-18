@@ -42,8 +42,8 @@ $( document ).ready(function() {
             $('.adress-wrap, .location-wrap').css('opacity','0');
         }else{
             $('.btn-search').css('display','none');
-            $('.adress-wrap, .location-wrap').removeAttr('style');  
-        }      
+            $('.adress-wrap, .location-wrap').removeAttr('style');
+        }
     });
 
 
@@ -54,7 +54,7 @@ $( document ).ready(function() {
 	// });
     $('.closebtn').click(function(){
         $('#mySidenav').removeClass('active-class');
-        $('.wrapper').css('margin-left', '0px');        
+        $('.wrapper').css('margin-left', '0px');
     });
 
     $('.lvlin').click(function(){
@@ -74,7 +74,7 @@ $( document ).ready(function() {
 
 
     $('.menu-toggle').click(function(event){
-        event.preventDefault();        
+        event.preventDefault();
         if(windowSize<=320) {
             $('#nav-icon').toggleClass('open');
             $('#mySidenav').toggleClass('no-tr');
@@ -151,7 +151,7 @@ $( document ).ready(function() {
 
 });
 // Блок "запишитесь"
-$('.enroll_tel').mask("+9 (999) 999-99-99");
+$('.tel_mask').mask("+9 (999) 999-99-99");
 
 //
 // Блок "Лечебно-диагностический центр"
