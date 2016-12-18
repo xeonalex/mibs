@@ -162,6 +162,7 @@ header.header
                 .logo-wrap
                     a.logo-link(href="#")
                         img.logo-img(src="img/logo.svg", alt="")
+                        img.logo-img-h(src="img/logo_white.svg", alt="")
                 .nav
                     ul.nav-list
                         li.nav-item
@@ -704,3 +705,36 @@ header.header
             input(type="tel")
             button.enroll_link(type="submit")
                 | Записаться на прием
+.signIn-form-tr
+    .container-short
+        .drop-down-wrap
+            .location
+                span.drop-down-main
+                    | Санкт-Петербург
+            .lang
+                span.drop-down-lang
+                    | RU
+                ul.lang-list
+                    li
+                        | EN
+        p.signUp-title
+            | Записать на прием
+        form
+            input(type="text" placeholder="Ваше имя")
+            input(type="tel" placeholder="Телефон")
+            button.enroll_link(type="submit" )
+                | Записаться на прием
+        .adresss-wrap
+            span
+                | Адреса:
+            ul
+                li
+                    | 6-я Советская, дом 24-26
+                li
+                    | Удельный пр., дом 22A
+                li
+                    | ул.Костюшко, дом 2
+                li
+                    | пр. Солидарности, д.4
+                li
+                    | ул. Есенина, д.2, корпус 3

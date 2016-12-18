@@ -930,12 +930,16 @@ body {
     }
     .logo {
         &-wrap {
-            margin-right: 90px;
+            margin-right: 131px;
         }
         &-img {
             width: 235px;
             height: 40px;
             vertical-align: middle;
+        }
+        &-img-h {
+            @extend .logo-img;
+            display: none;
         }
     }
     .nav {
@@ -954,6 +958,7 @@ body {
     .phone-wrap {
         position: relative;
         margin-right: 40px;
+        margin-top: -15px;
         .phone {
             font-family: "effraregular";
             font-size: 24px;
@@ -965,9 +970,9 @@ body {
                 background: url(../img/icons/mobile.svg);
                 width: 18px;
                 height: 30px;
-                top: 0;
+                top: 5px;
                 bottom: 0;
-                left: -25px;
+                left: -30px;
                 margin: 0auto;
                 background-size: contain;
             }
@@ -989,6 +994,51 @@ body {
         }
     }
 }
+
+.header__sign-in--fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    height: 70px;
+    padding: 12px 0;
+    background: $blue;
+    .sign-in-wrap {
+        .logo-img {
+            display: none;
+        }
+        .logo-img-h {
+            display: block;
+        }
+        padding: 0;
+        a,
+        span {
+            color: #fff !important;
+        }
+
+        .phone {
+            &:before {
+                content: "";
+                position: absolute;
+                background: url(../img/icons/mobile-w.svg);
+                width: 18px;
+                height: 30px;
+                top: 5px;
+                bottom: 0;
+                left: -30px;
+                margin: 0;
+                background-size: contain;
+            }
+        }
+        span {
+            bottom: -18px !important;
+        }
+    }
+    .logo-wrap {
+        margin-right: 130px;
+    }
+}
+
 .header__popup-signUp {
     display: none;
     position: relative;
@@ -1048,7 +1098,7 @@ body {
     .tabs-content {
         background: #fff;
         .tab {
-            display: none;
+            // display: none;
             min-height: 270px;
             .tabs-item {
                 display: none;
@@ -1177,6 +1227,7 @@ body {
 .tab-wrapper {
     @include clearfix;
 }
+
 @include breakpoint(1024) {
     .header__popup-wrap {
         .container-popup {
@@ -1202,7 +1253,7 @@ body {
     }
     .header__sign-in {
         .logo-wrap {
-            margin-right: 260px;
+            margin-right: 262px;
         }
         .nav {
             display: none;
@@ -1265,11 +1316,11 @@ body {
     }
     .header__sign-in {
         .logo-wrap {
-            margin-right: 50px;
+            margin-right: 83px;
         }
         .phone-wrap {
             margin-right: 10px;
-            margin-left: 30px;
+            margin-left: -3px;
         }
     }
     .header__popup-signUp {
@@ -1300,6 +1351,150 @@ body {
                     a {
                         width: 280px;
                     }
+                }
+            }
+        }
+    }
+}
+.signIn-form-tr {
+    display: none;
+    background: #fff;
+    margin: 0 auto;
+    width: 320px;
+    .container-short {
+        width: 280px;
+        margin: 0 auto;
+    }
+    .drop-down-wrap {
+        height: 60px;
+        background: #f0f2f5;
+        width: 320px;
+        margin-left: -20px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        @include clearfix;
+        .location {
+            float: left;
+            margin-top: 5px;
+            position: relative;
+        }
+        .lang {
+            float: right;
+        }
+    }
+    .drop-down-main {
+        cursor: pointer;
+        border-bottom: 1px dashed #d0d1d3;
+        position: relative;
+        display: block;
+        margin-bottom: 5px;
+        &:after {
+            content: "";
+            position: absolute;
+            background: url("../img/icons/arrow-down-dark.png");
+            width: 6px;
+            height: 3px;
+            top: 0;
+            bottom: 0;
+            right: -15px;
+            margin: auto;
+        }
+    }
+    .lang {
+        cursor: pointer;        
+        border: 1px solid #e2e4e7;
+        padding: 5px 15px 5px 33px;
+    }
+    .drop-down-lang {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("../img/icons/flag.png");
+            width: 17px;
+            height: 12px;
+            left: -25px;
+            top: 3px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            background: url(../img/icons/arrow-down-dark.png);
+            width: 6px;
+            height: 3px;
+            right: -11px;
+            background-repeat: no-repeat;
+            top: 7px;
+        }
+    }
+    .lang--active{
+        background: #fff;
+    }
+    .lang-list {
+        display: none;
+        margin-top: 5px;
+        li{
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                background: url(../img/icons/flag2.png);                
+                width: 17px;
+                height: 11px;
+                left: -25px;
+                top: 3px;
+            }
+        }
+    }
+    .signUp-title {
+        font-size: 20px;
+        color: #424242;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    form {
+        label {
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 13px 18px;
+            border: 1px solid transparent;
+            @include border-radius(2px);
+            background: #f0f2f5;
+            outline: none;
+            margin-bottom: 15px;
+            &:focus {
+                border: 1px solid $blue;
+            }
+        }
+        .enroll_link {
+            margin-top: 15px;
+            background: #ed1b2f;
+            font-size: 20px;
+            width: 100%;
+            text-transform: none;
+            margin-bottom: 20px;
+        }
+    }
+    .adresss-wrap{
+        width: 320px;
+        margin-left: -20px;
+        background: #f0f2f5;
+        padding: 20px;
+        span{
+            font-family: 'effrabold';
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #424242;     
+            display: block;       
+        }
+        ul{
+            li{
+                margin-bottom: 10px;
+                color: #424242;
+                &:last-child{
+                    margin-bottom: 0;
                 }
             }
         }
@@ -1365,28 +1560,46 @@ body {
             width: 100%;
             .tab {
                 padding: 0;
+                min-height: auto;
                 display: block !important;
-                .tabs-item--active {
-                    border-bottom: 1px solid red;
-                }
                 .tabs-item {
                     display: block;
                     width: 100%;
                     padding: 0;
                     padding-left: 80px;
-                    margin-bottom: 25px;
+                    margin-bottom: 10px;
                     float: none;
+                    position: relative;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        background: url(../img/icons/plus.png);
+                        width: 18px;
+                        height: 18px;
+                        top: 0;
+                        bottom: 0;
+                        right: 20px;
+                        margin: auto;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .tabs-item--active {
+                    border-bottom: 1px solid #ececec;
+                    &:after {
+                        background: url(../img/icons/minus.png);
+                        background-repeat: no-repeat;
+                    }
                 }
                 .tab-wrapper {
                     display: none;
                     margin-bottom: 20px;
                     padding: 0 20px;
                 }
-                // &:first-of-type {
-                //     .tab-wrapper {
-                //         display: block;
-                //     }
-                // }
+                &:first-of-type {
+                    .tab-wrapper {
+                        display: block;
+                    }
+                }
             }
             .mrt {
                 .mrt-list {
@@ -1399,6 +1612,44 @@ body {
                     }
                 }
             }
+            .mrt {
+                &:before {
+                    background: url("../img/icons/mrt.png");
+                    background-repeat: no-repeat;
+                }
+            }
+            .kt {
+                &:before {
+                    background: url("../img/icons/comp.png");
+                    background-repeat: no-repeat;
+                    left: 17px;
+                }
+            }
+            .yam {
+                &:before {
+                    background: url("../img/icons/yam.png");
+                    background-repeat: no-repeat;
+                    left: 20px;
+                }
+            }
+            .other {
+                &:before {
+                    background: url("../img/icons/other_services.png");
+                    background-repeat: no-repeat;
+                    left: 24px;
+                }
+            }
         }
+    }
+    .header__sign-in--fixed {
+        .sign-in-wrap {
+            padding: 12px 0;
+        }
+    }
+    .active-class {
+        transform: translateX(0);
+    }
+    .ml250{
+        transform: translateX(0);
     }
 }
