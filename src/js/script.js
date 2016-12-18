@@ -75,7 +75,7 @@ $( document ).ready(function() {
         .slideToggle();
     });
     // $('.header__sign-in .menu-toggle').click(function(event){
-    //     event.preventDefault();        
+    //     event.preventDefault();
     //     if(windowSize<=320) {
     //         $('.wrapper').removeClass('ml250');
     //         $('.wrapper').removeClass('ml320');
@@ -100,7 +100,7 @@ $( document ).ready(function() {
 
     $('.header__sign-in .menu-toggle').click(function(){
         $('.wrapper').removeClass('ml250').addClass('ml320');
-        $('.header__sign-in--fixed').css('margin-left','-320px');  
+        $('.header__sign-in--fixed').css('margin-left','-320px');
         $('.sidenav').addClass('active-class--fixed');
     });
 
@@ -186,5 +186,4 @@ $('.about_more-link').click(function(){
 // БЛОК НОВОСТЕЙ
 //
 $('.slider-wrap').bxSlider({
-
 });
