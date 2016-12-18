@@ -1,5 +1,5 @@
 body {
-    background: #ccc;
+    background: $light-grey;
 }
 .header {
     &__top-line {
@@ -15,7 +15,7 @@ body {
         font-size: 16px;
         position: relative;
         padding-left: 40px;
-        margin-right: 50px;
+        margin-right: 40px;
         float: left;
         text-decoration: none;
         color: #fff;
@@ -69,7 +69,7 @@ body {
     .loupe {
         &-wrap {
             float: left;
-            margin-right: 35px;
+            margin-right: 20px;
             form {
                 position: relative;
                 label {
@@ -235,9 +235,12 @@ body {
     }
     &-title {
         text-decoration: none;
-        border-bottom: 1px dashed #fff;
         color: #fff;
         position: relative;
+        padding: 0 17px 0 10px;
+        span {
+            border-bottom: 1px dashed #fff;
+        }
         &:after {
             content: "";
             position: absolute;
@@ -245,7 +248,7 @@ body {
             width: 6px;
             height: 3px;
             top: 10px;
-            right: -10px;
+            right: 0;
         }
     }
     &-map {
@@ -310,6 +313,7 @@ body {
         color: #fff;
         position: relative;
         padding-right: 12px;
+        margin-left: 0.3em;
         span {
             border-bottom: 1px dashed #fff;
         }
@@ -433,7 +437,7 @@ body {
             width: 6px;
             height: 3px;
             top: 25px;
-            right: -9px;
+            right: 0;
         }
     }
     &:hover {
@@ -1250,6 +1254,7 @@ body {
     background: #e6e8eb;
     width: 285px;
     height: 70px;
+    cursor: pointer;
     vertical-align: middle;
     margin-right: 10px;
     line-height: 70px;
@@ -1345,12 +1350,12 @@ body {
         }
         &.rus{
             &:before{
-                background: url(../img/icons/flag.png);                
+                background: url(../img/icons/flag.png);
             }
         }
         &.eng{
             &:before{
-                background: url(../img/icons/flag2.png);                
+                background: url(../img/icons/flag2.png);
             }
         }
         &:last-child{
@@ -1362,7 +1367,7 @@ body {
             padding-left: 30px;
         }
         input{
-            margin-top: 2px;        
+            margin-top: 2px;
             float: right;
             width: 15px;
             height: 15px;

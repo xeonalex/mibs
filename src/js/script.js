@@ -15,7 +15,7 @@ $( document ).ready(function() {
         return false;
     });
 
-    $('.location-city').on('click',function(){
+    $('.location-wrap').on('click',function(){
         $('.header__popup-wrap').bPopup({
             transition: 'slideBack',
             transitionClose: 'slideIn',
@@ -182,8 +182,10 @@ $('.tel_mask').mask("+9 (999) 999-99-99");
 // Блок "Лечебно-диагностический центр"
 //
 
-$('.about_more-link').click(function(){
+$('.about_more-link').click(function(event){
+    event.preventDefault();
 	$('.about_content').toggleClass('about_full');
+    return false;
 })
 
 //
