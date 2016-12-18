@@ -26,19 +26,23 @@ $( document ).ready(function() {
     $('.js-location').on('click', function(){
         $(this).toggleClass('init');
         if($(this).hasClass('init')){
-            $('.signIn-form-tr').css({'left':'0px','display':'block'});            
+            $('.signIn-form-tr').css({'left':'0px','display':'block'});
         }
         else{
-            $('.signIn-form-tr').removeAttr('style');      
+            $('.signIn-form-tr').removeAttr('style');
         }
     });
 
     $('.signUp-wrap .enroll_link').on('click',function(){
-        $('.header__popup-signUp').bPopup({
-            transition: 'slideBack',
-            transitionClose: 'slideIn',
-            closeClass:'popup-close'
-        });
+        if (windowSize>320) {
+            $('.header__popup-signUp').bPopup({
+                transition: 'slideBack',
+                transitionClose: 'slideIn',
+                closeClass:'popup-close'
+            });
+        } else {
+           window.location.hash = $(this).attr('href');
+        }
         return false;
     });
 
@@ -65,17 +69,17 @@ $( document ).ready(function() {
     });
 
     $('.lvlin').click(function(event){
-        event.preventDefault();       
+        event.preventDefault();
          $('.sidenav-list').addClass('sidenav-tx');
     });
     $('.back').click(function(event){
-        event.preventDefault(); 
+        event.preventDefault();
         $('.sidenav-list').removeClass('sidenav-tx');
     });
 
 
     $('.plus').click(function(event){
-        event.preventDefault();         
+        event.preventDefault();
         $(this).toggleClass('minus')
         .toggleClass('no-b')
         .next()
@@ -86,16 +90,16 @@ $( document ).ready(function() {
     $('.header__top-line .menu-toggle').click(function(event){
         event.preventDefault();
         if(windowSize<=320) { // 320-15(скролл бар)
-            $('.wrapper').removeClass('ml250');  
+            $('.wrapper').removeClass('ml250');
             $('#nav-icon').toggleClass('open');
             $('.sidenav').toggleClass('ml320');
         }else{
             $('.sidenav').toggleClass('active-class');
             $('.wrapper').toggleClass('ml250');
-            $('#nav-icon').toggleClass('open');            
+            $('#nav-icon').toggleClass('open');
         }
     });
-         
+
 // =======
     // $('.header__sign-in .menu-toggle').click(function(event){
     //     event.preventDefault();
@@ -118,16 +122,16 @@ $( document ).ready(function() {
 
 // <<<<<<< HEAD
     $('.header__sign-in .menu-toggle').click(function(event){
-        event.preventDefault();   
-        if(windowSize<=320){     
-            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');            
+        event.preventDefault();
+        if(windowSize<=320){
+            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
             $('.wrapper').removeClass('ml250').removeClass('ml320');
             $('.header__sign-in--fixed').toggleClass('ml0');
             $('.sidenav').toggleClass('active-class--fixed');
-        }   
+        }
         else{
-            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');                        
-            $('.wrapper').toggleClass('ml320');            
+            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
+            $('.wrapper').toggleClass('ml320');
             $('.header__sign-in--fixed').toggleClass('ml-320');
             $('.sidenav').toggleClass('active-class--fixed');
         };
@@ -176,13 +180,15 @@ $( document ).ready(function() {
 
     $('.footer .enroll_link').on('click', function(event){
         event.preventDefault();
-        if(windowSize <= 320){
+        if(windowSize > 320){
             $('.signIn-form-tr').bPopup({
                 transition: 'slideBack',
                 transitionClose: 'slideIn',
                 closeClass:'popup-close'
             });
             return false;
+        } else {
+            window.location.hash = $(this).attr('href');
         }
     });
 
@@ -203,7 +209,7 @@ $( document ).ready(function() {
         else{
             $('.header__sign-in').removeClass('header__sign-in--fixed');
             $('.sidenav').removeAttr('style');
-            $('.signIn-form-tr').css('top','50px');            
+            $('.signIn-form-tr').css('top','50px');
         }
     });
 

@@ -194,7 +194,7 @@ body {
             img{
                 display: none;
             }
-            img:nth-of-type(2){              
+            img:nth-of-type(2){
                 display: inline-block !important;
             }
         }
@@ -1057,11 +1057,17 @@ body {
     background: $blue;
     z-index: 2;
     .sign-in-wrap {
+        .signUp-tel{
+            display: none;
+        }
         .logo-img {
             display: none;
         }
         .logo-img-h {
             display: block;
+        }
+        .signUp-wrap {
+            display: inline-block;
         }
         padding: 0;
         a,
@@ -1090,9 +1096,7 @@ body {
     .logo-wrap {
         margin-right: 130px;
     }
-        .menu-toggle{
-        display: block;
-    }
+
 }
 
 .header__popup-signUp {
@@ -1285,6 +1289,11 @@ body {
 }
 
 @include breakpoint(1024) {
+    .header__sign-in--fixed {
+        .menu-toggle{
+            display: block;
+        }
+    }
     .header__popup-wrap {
         .container-popup {
             width: 940px;
@@ -1315,7 +1324,7 @@ body {
             display: none;
         }
         &--fixed {
-  
+
             .container{
                 margin: 0;
             }
@@ -1441,7 +1450,7 @@ body {
     left: -320px;
     width: 320px;
     z-index: 10;
-    @include t25(); 
+    @include t25();
     .container-short {
         width: 280px;
         margin: 0 auto;
@@ -1582,6 +1591,16 @@ body {
     }
 }
 @include breakpoint(320) {
+    .intro-wrapper {
+        background-color: $light-grey;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        .tabs-content {
+            background:none;
+        }
+    }
     .sidenav .search-input form .search-wrap {
         .search{
             display: block;
@@ -1632,6 +1651,9 @@ body {
                 text-align: center;
             }
         }
+        .signUp-wrap {
+            display: none;
+        }
         .logo-wrap {
             margin-right: 0;
         }
@@ -1642,7 +1664,22 @@ body {
         .signUp-wrap{
                 margin-top: 9px;
             a{
-                padding: 10px 25px;
+                padding: 10px 20px;
+            }
+        }
+        .signUp-tel {
+            display: inline-block !important;
+            width: 30px;
+            margin-top: 9px;
+            vertical-align: middle;
+            margin-left: 10px;
+            border: 1px solid #fff;
+            @include border-radius(2px);
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            img{
+                vertical-align: middle;
             }
         }
         .phone-wrap{
