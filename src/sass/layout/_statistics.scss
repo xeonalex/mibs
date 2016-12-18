@@ -1,0 +1,411 @@
+.statistac {
+	background-color: $light-grey;
+	.container {
+		padding: {
+			top: 40px;
+			bottom: 35px;
+		}
+	}
+}
+.stat_list {
+	@include clearfix;
+	font-size: 0;
+	text-align: justify;
+	&:after{
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+	.stat_item {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		&:nth-of-type(1) {
+			width: 140px;
+			.stat_data .img {
+				background-image: url(../img/icons/block2/statistic_1.png);
+				width: 101px;
+				height: 102px;
+			}
+		}
+		&:nth-of-type(2) {
+			width: 190px;
+			.stat_data .img {
+				background-image: url(../img/icons/block2/statistic_2.png);
+				width: 124px;
+				height: 103px;
+			}
+		}
+		&:nth-of-type(3) {
+			width: 160px;
+			.stat_data .img {
+				background-image: url(../img/icons/block2/statistic_3.png);
+				width: 96px;
+				height: 108px;
+			}
+		}
+		&:nth-of-type(4) {
+			width: 160px;
+			.stat_data .img {
+				background-image: url(../img/icons/block2/statistic_4.png);
+				width: 112px;
+				height: 102px;
+			}
+		}
+		&:nth-of-type(5) {
+			width: 180px;
+			.stat_data .img {
+				background-image: url(../img/icons/block2/statistic_5.png);
+				width: 79px;
+				height: 106px;
+				right: 15%;
+			}
+		}
+	}
+	.stat_data {
+		position: relative;
+		padding-bottom: 10px;
+		min-height: 75px;
+		padding-top: 15px;
+		.img {
+			display: block;
+			position: absolute;
+			z-index: 0;
+			background: {
+				position: center;
+				repeat: no-repeat;
+				size:cover;
+			}
+			top: 0;
+			right: 0;
+		}
+		.number {
+			position: relative;
+			z-index: 1;
+			display: block;
+			font-family: 'effrabold';
+			line-height: 1;
+			font-size: 62px;
+			color: $blue;
+		}
+		.of {
+			position: relative;
+			z-index: 1;
+			display: block;
+			line-height: 1;
+			font-size: 24px;
+
+		}
+	}
+	.stat_note {
+		line-height: 19px;
+		font-size: 14px;
+	}
+}
+
+/// MOBILE
+///
+@include breakpoint(1024) {
+	.stat_list {
+		.stat_item {
+			display: inline-block;
+			vertical-align: top;
+			text-align: left;
+			&:nth-of-type(1) {
+				width: 140px;
+				.stat_data .img {
+					width: 77px;
+					height: 77px;
+				}
+			}
+			&:nth-of-type(2) {
+				width: 165px;
+				.stat_data .img {
+					height: 78px;
+					width: 94px;
+				}
+			}
+			&:nth-of-type(3) {
+				width: 160px;
+				.stat_data .img {
+					width: 73px;
+					height: 82px;
+				}
+			}
+			&:nth-of-type(4) {
+				width: 160px;
+				.stat_data .img {
+					width: 84px;
+					height: 76px;
+				}
+			}
+			&:nth-of-type(5) {
+				width: 180px;
+				.stat_data .img {
+					right: 30%;
+					width: 60px;
+					height: 80px;
+				}
+			}
+			.stat_data {
+				.number {
+					font-size: 48px;
+				}
+				.of {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+@include breakpoint(768) {
+	.stat_list {
+		.stat_item {
+			&:nth-of-type(1) {
+				width: 115px;
+			}
+			&:nth-of-type(2) {
+				width: 125px;
+			}
+			&:nth-of-type(3) {
+				width: 125px;
+			}
+			&:nth-of-type(4) {
+				width: 120px;
+			}
+			&:nth-of-type(5) {
+				width: 145px;
+				.stat_data .img {
+					right: 20%;
+				}
+			}
+
+			.stat_data {
+				.number {
+					font-size: 42px;
+				}
+				.of {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+@include breakpoint(320) {
+	.stat_list {
+		margin-top: -25px;
+		.stat_item {
+			margin-top: 25px;
+			&:nth-of-type(1) {
+				width: 135px;
+			}
+			&:nth-of-type(2) {
+				width: 125px;
+			}
+			&:nth-of-type(3) {
+				width: 135px;
+			}
+			&:nth-of-type(4) {
+				width: 120px;
+			}
+			&:nth-of-type(5) {
+				width: 160px;
+				.stat_data .img {
+					right: 15%;
+				}
+			}
+			.stat_data {
+				padding-top: 5px;
+				padding-bottom: 0;
+				.number {
+					font-size: 48px;
+					margin-bottom: 5px;
+				}
+				.of {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+
+/// БЛОК МРТ И ДРУГИХ УСЛУГ НА ФОНЕ КАРТИНОК
+///
+.departments {
+	.container {
+		font-size: 0;
+		text-align: justify;
+		&:after{
+			display: inline-block;
+			width: 100%;
+			content: '';
+		}
+	}
+}
+.department_block {
+	width: 283px;
+	height: 280px;
+	padding: 28px 20px 66px 20px;
+	display: inline-block;
+	text-align: left;
+	font-size: 14px;
+	vertical-align: top;
+	position: relative;
+	color: #fff;
+	&.big{
+		width: 588px;
+		.department_img-wrap {
+			width: 588px;
+		}
+		padding: 20px 20px 66px 20px;
+		.department_title{
+			line-height: 1;
+			font-size: 82px;
+			margin-bottom: 0;
+		}
+	}
+	> * {
+		position: relative;
+		z-index: 1;
+	}
+	.department_img-wrap {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		width: 283px;
+		height: 280px;
+		overflow: hidden;
+		text-align: center;
+		img{
+			display: inline-block;
+		}
+	}
+	.department_title{
+		font-family: 'effraheavy';
+		font-size: 28px;
+		line-height: 1.25;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+	.depertment_text{
+		max-width: 330px;
+
+	}
+	.department_link{
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		@extend .enroll_link;
+		padding: 12.2px 31px;
+		text-transform: none;
+		border: 1px solid #fff;
+		width: 150px;
+		text-align: center;
+		&:hover {
+			background: #fff;
+			color: $footer-dark;
+			border-color: transparent;
+		}
+
+	}
+}
+
+//// MOBILE БЛОК МРТ И ДРУГИХ УСЛУГ НА ФОНЕ КАРТИНОК
+///
+@include breakpoint(1024) {
+	.department_block {
+		width: 238px;
+		height: 220px;
+		&.big{
+			width: 460px;
+			.department_img-wrap {
+				width: 460px;
+			}
+			.department_title{
+				font-size: 58px;
+			}
+		}
+		.department_img-wrap {
+			width: 238px;
+			height: 220px;
+		}
+		.depertment_text{
+			max-width: 340px;
+		}
+		.department_title{
+			font-size: 20px;
+			line-height: 1.25;
+			margin-bottom: 5px;
+		}
+	}
+}
+@include breakpoint(768) {
+	.department_block {
+		width: 199px;
+		height: 220px;
+		&.big{
+			width: 327px;
+			.department_img-wrap {
+				width: 327px;
+			}
+			.department_title{
+				font-size: 58px;
+			}
+		}
+		.depertment_text{
+			max-width: 100%;
+		}
+		.department_img-wrap {
+			width: 199px;
+			height: 220px;
+			img{
+				max-width: none;
+				max-height: 100%;
+			}
+
+		}
+		.department_title{
+			font-size: 16px;
+			line-height: 1.25;
+			margin-bottom: 10px;
+		}
+	}
+}
+@include breakpoint(320) {
+	.departments {
+		.container {
+			padding: 0;
+			margin-bottom: 10px;
+		}
+	}
+	.department_block {
+		margin-top: 10px;
+		width: 100%;
+		height: 245px;
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&.big{
+			width: 100%;
+			.department_img-wrap {
+				display: block;
+				max-width: 320px;
+			}
+			.department_title{
+				font-size: 48px;
+				margin-bottom: 0;
+			}
+		}
+		.department_img-wrap {
+			width: 320px;
+			height: 245px;
+		}
+		.department_title{
+			font-size: 28px;
+			line-height: 1.25;
+			margin-bottom: 5px;
+		}
+	}
+}
