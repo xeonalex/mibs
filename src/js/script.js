@@ -1,6 +1,9 @@
 console.log('hello from script.js');
 var windowSize;
 $( document ).ready(function() {
+    $(window).on('resize', function(){
+        windowSize = document.documentElement.clientWidth;
+    });
     $('.adress-title').click(function(){
         $('.adress-wrap').toggleClass('adress-wrap--active');
         $('.adress-map').slideToggle();
@@ -71,7 +74,18 @@ $( document ).ready(function() {
         .next()
         .slideToggle();
     });
-
+    // $('.header__sign-in .menu-toggle').click(function(event){
+    //     event.preventDefault();        
+    //     if(windowSize<=320) {
+    //         $('.wrapper').removeClass('ml250');
+    //         $('.wrapper').removeClass('ml320');
+    //         $('#nav-icon').toggleClass('open');
+    //         $('#mySidenav').toggleClass('no-tr');
+    //     }else{
+    //         $('#mySidenav').toggleClass('active-class');
+    //         $('.wrapper').toggleClass('ml250');
+    //     }
+    // });
 
     $('.menu-toggle').click(function(event){
         event.preventDefault();
@@ -84,6 +98,11 @@ $( document ).ready(function() {
         }
     });
 
+    $('.header__sign-in .menu-toggle').click(function(){
+        $('.wrapper').removeClass('ml250').addClass('ml320');
+        $('.header__sign-in--fixed').css('margin-left','-320px');  
+        $('.sidenav').addClass('active-class--fixed');
+    });
 
     $('.after-plus .city-link').click(function(event){
         event.preventDefault();
@@ -131,20 +150,22 @@ $( document ).ready(function() {
         }
     });
 
+    var signIn = $('.header__sign-in');
+    var signInPosition = signIn.offset().top;
+    signInPosition += signIn.outerHeight();
+
     $(window).on('scroll', function(){
-        if($(window).scrollTop()>200){
+        if($(window).scrollTop() > signInPosition){
             $('.header__sign-in')
             .addClass('header__sign-in--fixed');
+            $('.sidenav').css('top', $('.header__sign-in').outerHeight());
         }
         else{
             $('.header__sign-in').removeClass('header__sign-in--fixed');
+            $('.sidenav').removeAttr('style');
         }
     });
 
-
-    $(window).on('resize', function(){
-        windowSize = document.documentElement.clientWidth;
-    });
 
 
 

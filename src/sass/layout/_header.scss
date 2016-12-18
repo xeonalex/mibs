@@ -770,8 +770,14 @@ body {
 .active-class {
     transform: translateX(-320px);
 }
+.active-class--fixed {
+    margin-left: 320px;
+}
 .ml250 {
     transform: translateX(320px);
+}
+.ml320 {
+    margin-left: 320px;
 }
 .wrapper {
     transition: all .5s;
@@ -1003,6 +1009,7 @@ body {
     height: 70px;
     padding: 12px 0;
     background: $blue;
+    z-index: 2;
     .sign-in-wrap {
         .logo-img {
             display: none;
@@ -1258,6 +1265,17 @@ body {
         .nav {
             display: none;
         }
+        &--fixed {
+            .logo-wrap {
+                display: none;
+            }
+            .menu-toggle {
+                margin-right: 384px;
+                display: block;
+                padding: 15px 19px 11px 3px;
+                font-size: 16px;
+            }
+        }
     }
     .intro-wrapper {
         .tabs-list {
@@ -1321,6 +1339,11 @@ body {
         .phone-wrap {
             margin-right: 10px;
             margin-left: -3px;
+        }
+        &--fixed {
+            .menu-toggle {
+                margin-right: 205px;
+            }
         }
     }
     .header__popup-signUp {
@@ -1401,7 +1424,7 @@ body {
         }
     }
     .lang {
-        cursor: pointer;        
+        cursor: pointer;
         border: 1px solid #e2e4e7;
         padding: 5px 15px 5px 33px;
     }
@@ -1427,18 +1450,18 @@ body {
             top: 7px;
         }
     }
-    .lang--active{
+    .lang--active {
         background: #fff;
     }
     .lang-list {
         display: none;
         margin-top: 5px;
-        li{
+        li {
             position: relative;
-            &:before{
-                content: '';
+            &:before {
+                content: "";
                 position: absolute;
-                background: url(../img/icons/flag2.png);                
+                background: url(../img/icons/flag2.png);
                 width: 17px;
                 height: 11px;
                 left: -25px;
@@ -1477,23 +1500,23 @@ body {
             margin-bottom: 20px;
         }
     }
-    .adresss-wrap{
+    .adresss-wrap {
         width: 320px;
         margin-left: -20px;
         background: #f0f2f5;
         padding: 20px;
-        span{
-            font-family: 'effrabold';
+        span {
+            font-family: "effrabold";
             font-size: 20px;
             margin-bottom: 15px;
-            color: #424242;     
-            display: block;       
+            color: #424242;
+            display: block;
         }
-        ul{
-            li{
+        ul {
+            li {
                 margin-bottom: 10px;
                 color: #424242;
-                &:last-child{
+                &:last-child {
                     margin-bottom: 0;
                 }
             }
@@ -1517,6 +1540,10 @@ body {
     }
     .sidenav {
         margin-top: 50px;
+    }
+    .sidenav .active-class{
+        margin-top: 0;
+        margin-left: 0;
     }
     .telephone,
     .location-header {
@@ -1642,14 +1669,25 @@ body {
         }
     }
     .header__sign-in--fixed {
+        height: 70px;
         .sign-in-wrap {
-            padding: 12px 0;
+            padding: 0;
+            .full {
+                font-size: 0;
+                padding: 18px 18px 9px 19px;
+            }
         }
     }
     .active-class {
-        transform: translateX(0);
+        // transform: translateX(0);
+        margin-left: 0;
     }
-    .ml250{
-        transform: translateX(0);
+    .ml250 {
+        // transform: translateX(0);
+        margin-left: 0;
+    }
+    .ml320 {
+        // transform: translateX(0);
+        margin-left: 0;
     }
 }
