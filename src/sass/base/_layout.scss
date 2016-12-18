@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-body {
+html, body {
     font-family: "effraregular";
     min-width: 1240px;
     // color: #fff;
@@ -44,7 +44,7 @@ body {
 }
 
 @include breakpoint(1024) {
-    body{
+    html, body{
         min-width: 1024px;
     }
     .container {
@@ -56,7 +56,7 @@ body {
     }
 }
 @include breakpoint(768) {
-    body{
+    html, body{
         min-width: 768px;
     }
     .container {
@@ -68,7 +68,7 @@ body {
     }
 }
 @include breakpoint(320) {
-    body{
+    html, body{
         min-width: 320px;
     }
     .container {

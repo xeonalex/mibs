@@ -86,63 +86,82 @@ $( document ).ready(function() {
         .slideToggle();
     });
 // <<<<<<< HEAD
+//
 
-    $('.header__top-line .menu-toggle').click(function(event){
+        // ВЫЗОВ САЙДБАРА
+    $('.menu-toggle').click(function(event){
         event.preventDefault();
-        if(windowSize<=320) { // 320-15(скролл бар)
+        $('#nav-icon').toggleClass('open'); // меняем класс для гамбургера
+        if(windowSize<=320) {
             $('.wrapper').removeClass('ml250');
-            $('#nav-icon').toggleClass('open');
-            $('.sidenav').toggleClass('ml320');
-        }else{
             $('.sidenav').toggleClass('active-class');
-            $('.wrapper').toggleClass('ml250');
-            $('#nav-icon').toggleClass('open');
+        } else {
+            $('.wrapper').toggleClass('ml250');  // сдвигаем враппер
+            $('.sidenav').toggleClass('active-class'); // переключаем класс сайдбара
+            // сдвигаем фикс блок в случае если пользователь проскролил с открытым сайдбаром
+            // включив его через включатель в хедере
+            if ($('.header__sign-in').hasClass('header__sign-in--fixed')) {
+                $('.header__sign-in--fixed').toggleClass('ml-320');
+            }
+
+            // оключаем горизонтальный скролл чтобы не видел отодвинутый контент
+            if ($('.sidenav').hasClass('active-class')) {
+                $('html,body').css('overflow-x','hidden');
+            } else {
+                $('html, body').removeAttr('style');
+            }
         }
     });
+    // вже не треба ||
+    //          ||
+    //          ||
+    //          >
+                                    //     $('.header__top-line .menu-toggle').click(function(event){
+                                    //         event.preventDefault();
+                                    //         if(windowSize<=320) {
+                                    //             // $('.wrapper').removeClass('ml250');
+                                    //             // // $('#nav-icon').toggleClass('open');
+                                    //             // $('.sidenav').toggleClass('ml320');
+                                    //         }else{
+                                    //             // $('.sidenav').toggleClass('active-class');
+                                    //             // if ($('.sidenav').hasClass('active-class')) {
+                                    //             //     $('html,body').css('overflow-x','hidden');
+                                    //             // } else {
+                                    //             //     $('html, body').removeAttr('style');
+                                    //             // }
+                                    //             // $('.wrapper').toggleClass('ml250');
+                                    //             // $('#nav-icon').toggleClass('open');
+                                    //         }
+                                    //     });
 
-// =======
-    // $('.header__sign-in .menu-toggle').click(function(event){
-    //     event.preventDefault();
-    //     if(windowSize<=320) {
-    //         $('.wrapper').removeClass('ml250');
-    //         $('.wrapper').removeClass('ml320');
-    //         $('#nav-icon').toggleClass('open');
-    //         $('#mySidenav').toggleClass('no-tr');
-    //     }else{
-    //         $('#mySidenav').toggleClass('active-class');
-    //         $('.wrapper').toggleClass('ml250');
-    //     }
-    // });
+                                    //     $('.header__sign-in .menu-toggle').click(function(event){
+                                    //         event.preventDefault();
+                                    //         if(windowSize<=320){
+                                    //             // // $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
+                                    //             // $('.wrapper').removeClass('ml250').removeClass('ml320');
+                                    //             // $('.header__sign-in--fixed').toggleClass('ml0');
+                                    //             // $('.sidenav').toggleClass('active-class--fixed');
+                                    //         }
+                                    //         else{
+                                    //             // $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
+                                    //             // $('.wrapper').toggleClass('ml320');
+                                    //             // $('.header__sign-in--fixed').toggleClass('ml-320');
+                                    //             // $('.sidenav').toggleClass('active-class--fixed');
+                                    //         };
 
+                                    // // // =======
+                                    // //     $('.header__sign-in .menu-toggle').click(function(){
+                                    // //         $('.wrapper').removeClass('ml250').addClass('ml320');
+                                    // //         $('.header__sign-in--fixed').css('margin-left','-320px');
+                                    // //         $('.sidenav').addClass('active-class--fixed');
+                                    // // // >>>>>>> 23338970a1ad3cee37e387bda8e7ebec3386ce8a
+                                    //     });
 
-//     $('.menu-toggle').click(function(event){
-//         event.preventDefault();
-//         if(windowSize<=320) {
-// >>>>>>> 23338970a1ad3cee37e387bda8e7ebec3386ce8a
+    //           ^
+    //          ||
+    //          ||
+    // вже не треба ||
 
-// <<<<<<< HEAD
-    $('.header__sign-in .menu-toggle').click(function(event){
-        event.preventDefault();
-        if(windowSize<=320){
-            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
-            $('.wrapper').removeClass('ml250').removeClass('ml320');
-            $('.header__sign-in--fixed').toggleClass('ml0');
-            $('.sidenav').toggleClass('active-class--fixed');
-        }
-        else{
-            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
-            $('.wrapper').toggleClass('ml320');
-            $('.header__sign-in--fixed').toggleClass('ml-320');
-            $('.sidenav').toggleClass('active-class--fixed');
-        };
-
-// // =======
-//     $('.header__sign-in .menu-toggle').click(function(){
-//         $('.wrapper').removeClass('ml250').addClass('ml320');
-//         $('.header__sign-in--fixed').css('margin-left','-320px');
-//         $('.sidenav').addClass('active-class--fixed');
-// // >>>>>>> 23338970a1ad3cee37e387bda8e7ebec3386ce8a
-    });
 
     $('.after-plus .city-link').click(function(event){
         event.preventDefault();
@@ -151,17 +170,21 @@ $( document ).ready(function() {
     });
 
 
-    $('.tabs-list .tabs-item').click(function openCity() {
+    $('.tabs-list .tabs-item').click(function openCity(event) {
+        event.preventDefault();
         var tab = $(this).data('tab');
         $('.tab').css('display','none');
         $('.tabs-list .tabs-item--active').removeClass('tabs-item--active');
         $(this).addClass('tabs-item--active');
         $("#"+ tab).css('display','block');
+        return false;
     });
 
 
-    $('.tabs-content .tab .tabs-item').click(function(){
+    $('.tabs-content .tab .tabs-item').click(function(event){
+        event.preventDefault();
         $(this).toggleClass('tabs-item--active').next().slideToggle();
+        return false;
     });
 
     $('.drop-down-main').on('click',function(){
@@ -197,9 +220,14 @@ $( document ).ready(function() {
     signInPosition += signIn.outerHeight();
 
     $(window).on('scroll', function(){
+
+        // меняет позицию сайдбара и верней плашки в зависисмости от скролла
         if($(window).scrollTop() > signInPosition){
             $('.header__sign-in')
             .addClass('header__sign-in--fixed');
+            if ($('.sidenav').hasClass('active-class') && windowSize >320) {
+                $('.header__sign-in').addClass('ml-320');
+            }
             $('.sidenav').css({
                 'top': $('.header__sign-in').outerHeight(),
                 'margin-top': '0'
@@ -210,6 +238,7 @@ $( document ).ready(function() {
             $('.header__sign-in').removeClass('header__sign-in--fixed');
             $('.sidenav').removeAttr('style');
             $('.signIn-form-tr').css('top','50px');
+            $('.header__sign-in').removeClass('ml-320');
         }
     });
 

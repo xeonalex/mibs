@@ -1446,6 +1446,8 @@ body {
     position: fixed;
     background: #fff;
     margin: 0 auto;
+    max-height: 100vh;
+    overflow: scroll;
     top: 50px;
     left: -320px;
     width: 320px;
