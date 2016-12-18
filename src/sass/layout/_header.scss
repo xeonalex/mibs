@@ -97,11 +97,10 @@ body {
                     border: none;
                     font-size: 16px;
                     background-color: transparent;
-                    padding: 10px 10px;
+                    padding: 10px 65px 10px 40px;
                     -webkit-transition: all .5s ease-in-out;
                             transition: all .5s ease-in-out;
                     outline: none;
-                    padding-left: 40px;
                     cursor: pointer;
                     position: relative;
                     z-index: 2;
@@ -658,13 +657,14 @@ body {
     }
     .search-input {
         background: $blue;
-        padding: 13px 0;
+        padding: 13px 0 17px;
         form {
             width: 280px;
             margin: 0 auto;
             .search-wrap {
                 position: relative;
                 border-radius: 2px;
+                overflow: hidden;
                 .search {
                     padding: 11px 15px;
                     border: none;
@@ -1582,6 +1582,19 @@ body {
     }
 }
 @include breakpoint(320) {
+    .sidenav .search-input form .search-wrap {
+        .search{
+            display: block;
+            padding: 11px 75px 11px 15px;
+        }
+
+        .btn-search-h {
+            right: 1px;
+            top: 1px;
+            padding: 11px 12px;
+            line-height: 1;
+        }
+    }
     .version,
     .loupe-wrap,
     .adress-wrap,
@@ -1622,9 +1635,21 @@ body {
         .logo-wrap {
             margin-right: 0;
         }
-        .phone-wrap,
-        .signUp-wrap {
+        .menu-toggle{
+            margin-right: 0;
+            padding-right: 0;
+        }
+        .signUp-wrap{
+                margin-top: 9px;
+            a{
+                padding: 10px 25px;
+            }
+        }
+        .phone-wrap{
             display: none;
+        }
+        .signUp-tel{
+            display: inline-block;
         }
     }
     .intro-wrapper {

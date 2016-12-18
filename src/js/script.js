@@ -49,8 +49,8 @@ $( document ).ready(function() {
             $('.adress-wrap, .location-wrap').css('opacity','0');
         }else{
             $('.btn-search').css('display','none');
-            $('.adress-wrap, .location-wrap').removeAttr('style');  
-        }      
+            $('.adress-wrap, .location-wrap').removeAttr('style');
+        }
     });
 
 
@@ -61,7 +61,7 @@ $( document ).ready(function() {
 	// });
     $('.closebtn').click(function(){
         $('#mySidenav').removeClass('active-class');
-        $('.wrapper').css('margin-left', '0px');        
+        $('.wrapper').css('margin-left', '0px');
     });
 
     $('.lvlin').click(function(event){
@@ -81,11 +81,12 @@ $( document ).ready(function() {
         .next()
         .slideToggle();
     });
+// <<<<<<< HEAD
 
     $('.header__top-line .menu-toggle').click(function(event){
         event.preventDefault();
         if(windowSize<=320) { // 320-15(скролл бар)
-            $('.wrapper').removeClass('ml250');            
+            $('.wrapper').removeClass('ml250');  
             $('#nav-icon').toggleClass('open');
             $('.sidenav').toggleClass('ml320');
         }else{
@@ -94,7 +95,28 @@ $( document ).ready(function() {
             $('#nav-icon').toggleClass('open');            
         }
     });
+         
+// =======
+    // $('.header__sign-in .menu-toggle').click(function(event){
+    //     event.preventDefault();
+    //     if(windowSize<=320) {
+    //         $('.wrapper').removeClass('ml250');
+    //         $('.wrapper').removeClass('ml320');
+    //         $('#nav-icon').toggleClass('open');
+    //         $('#mySidenav').toggleClass('no-tr');
+    //     }else{
+    //         $('#mySidenav').toggleClass('active-class');
+    //         $('.wrapper').toggleClass('ml250');
+    //     }
+    // });
 
+
+//     $('.menu-toggle').click(function(event){
+//         event.preventDefault();
+//         if(windowSize<=320) {
+// >>>>>>> 23338970a1ad3cee37e387bda8e7ebec3386ce8a
+
+// <<<<<<< HEAD
     $('.header__sign-in .menu-toggle').click(function(event){
         event.preventDefault();   
         if(windowSize<=320){     
@@ -108,7 +130,14 @@ $( document ).ready(function() {
             $('.wrapper').toggleClass('ml320');            
             $('.header__sign-in--fixed').toggleClass('ml-320');
             $('.sidenav').toggleClass('active-class--fixed');
-        }
+        };
+
+// // =======
+//     $('.header__sign-in .menu-toggle').click(function(){
+//         $('.wrapper').removeClass('ml250').addClass('ml320');
+//         $('.header__sign-in--fixed').css('margin-left','-320px');
+//         $('.sidenav').addClass('active-class--fixed');
+// // >>>>>>> 23338970a1ad3cee37e387bda8e7ebec3386ce8a
     });
 
     $('.after-plus .city-link').click(function(event){
@@ -184,7 +213,7 @@ $( document ).ready(function() {
 
 });
 // Блок "запишитесь"
-$('.enroll_tel').mask("+9 (999) 999-99-99");
+$('.tel_mask').mask("+9 (999) 999-99-99");
 
 //
 // Блок "Лечебно-диагностический центр"
@@ -198,5 +227,4 @@ $('.about_more-link').click(function(){
 // БЛОК НОВОСТЕЙ
 //
 $('.slider-wrap').bxSlider({
-
 });
