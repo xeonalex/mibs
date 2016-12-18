@@ -12,7 +12,7 @@ header.header
                             span
                     a.full(href="#")
                         | Меню
-                a(href="#").telephone
+                a(href="tel:+8(812)244-00-24").telephone
                     | 8(812)244-00-24
                 .location-header
                     a.js-location(href="#")
@@ -445,8 +445,6 @@ header.header
                     a(href="#")
                         | Ярославль
 
-
-//- ==============================
 .header__popup-city
     .popup-close
         img(src="img/icons/close-l.png", alt="")
@@ -549,9 +547,9 @@ header.header
             .lang
                 span.drop-down-lang
                     | RU
-                ul.lang-list
-                    li
-                        | EN
+                //- ul.lang-list
+                //-     li
+                //-         | EN
         p.signUp-title
             | Записать на прием
         form
@@ -573,3 +571,23 @@ header.header
                     | пр. Солидарности, д.4
                 li
                     | ул. Есенина, д.2, корпус 3
+.header__popup-lang
+    .popup-close
+        img(src="img/icons/close-l.png", alt="")
+    .container-short
+        .lang-list
+            li.lang-item.rus
+                label(for="radio")
+                    | Русский
+                input(type='radio',
+                                id='radio',
+                                class="radio",
+                                name="radio")
+            li.lang-item.eng
+                label(for="radio-n")
+                    | English
+                input(type='radio',
+                                id='radio-n',
+                                class="radio",
+                                name="radio")
+

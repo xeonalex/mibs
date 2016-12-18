@@ -134,9 +134,13 @@ $( document ).ready(function() {
         return false;
     });
 
-    $('.drop-down-lang').click(function(){
-        $('.lang').toggleClass('lang--active');
-        $(this).next().slideToggle();
+    $('.drop-down-lang').on('click',function(){
+        $('.header__popup-lang  ').bPopup({
+            transition: 'slideBack',
+            transitionClose: 'slideIn',
+            closeClass:'popup-close'
+        });
+        return false;
     });
 
     var signIn = $('.header__sign-in');
