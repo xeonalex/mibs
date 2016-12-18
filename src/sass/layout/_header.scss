@@ -1287,7 +1287,68 @@ body {
 .tab-wrapper {
     @include clearfix;
 }
+.header__popup-lang{
+    @include border-radius(2px);
+    display: none;
+    width: 280px;
+    background: #fff;
+    position: relative;
+    .popup-close{
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: -28px;
+        right: 0;
+    }
+    .container-short{
+        margin: 0 auto;
+    }
+    .lang-list{
+        margin: 0;
+        padding: 0;
+    }
+    .lang-item{
+        cursor: pointer;
+        padding: 20px 25px;
+        border-bottom: 1px solid #dfe1e2;
+        @include clearfix;
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 17px;
+            height: 12px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &.rus{
+            &:before{
+                background: url(../img/icons/flag.png);                
+            }
+        }
+        &.eng{
+            &:before{
+                background: url(../img/icons/flag2.png);                
+            }
+        }
+        &:last-child{
+            border-bottom: none;
+        }
+        label{
+            float: left;
+            font-size: 16px;
+            padding-left: 30px;
+        }
+        input{
+            margin-top: 2px;        
+            float: right;
+            width: 15px;
+            height: 15px;
+        }
 
+    }
+}
 @include breakpoint(1024) {
     .header__sign-in--fixed {
         .menu-toggle{
@@ -1298,6 +1359,7 @@ body {
         .container-popup {
             width: 940px;
             position: relative;
+            padding: 20px 25px 40px;
         }
         .popup-content {
             ul {
