@@ -15,8 +15,9 @@ header.header
                 a(href="#").telephone
                     | 8(812)244-00-24
                 .location-header
-                    a(href="#")
+                    a.js-location(href="#")
                         img(src="img/icons/location-b.png", alt="")
+                        img(src="img/icons/close-l.png", alt="")
                 #mySidenav.sidenav
                     ul.sidenav-list
                         li.sidenav-item
@@ -622,6 +623,8 @@ header.header
 
 //- ==============================
 .header__popup-city
+    .popup-close
+        img(src="img/icons/close-l.png", alt="")
     .container-short
         .city-search
             form.city-search-from-wrap

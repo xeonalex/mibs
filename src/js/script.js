@@ -1,5 +1,5 @@
 console.log('hello from script.js');
-var windowSize;
+var windowSize = document.documentElement.clientWidth;
 $( document ).ready(function() {
     $(window).on('resize', function(){
         windowSize = document.documentElement.clientWidth;
@@ -22,13 +22,17 @@ $( document ).ready(function() {
         });
         return false;
     });
-    $('.location-header').on('click',function(){
-        $('.header__popup-city').bPopup({
-            transition: 'slideBack',
-            transitionClose: 'slideIn'
-        });
-        return false;
+
+    $('.js-location').on('click', function(){
+        $(this).toggleClass('init');
+        if($(this).hasClass('init')){
+            $('.signIn-form-tr').css({'left':'0px','display':'block'});            
+        }
+        else{
+            $('.signIn-form-tr').removeAttr('style');      
+        }
     });
+
     $('.signUp-wrap .enroll_link').on('click',function(){
         $('.header__popup-signUp').bPopup({
             transition: 'slideBack',
@@ -60,48 +64,51 @@ $( document ).ready(function() {
         $('.wrapper').css('margin-left', '0px');        
     });
 
-    $('.lvlin').click(function(){
-        $('.sidenav-list').addClass('sidenav-tx');
+    $('.lvlin').click(function(event){
+        event.preventDefault();       
+         $('.sidenav-list').addClass('sidenav-tx');
     });
-    $('.back').click(function(){
+    $('.back').click(function(event){
+        event.preventDefault(); 
         $('.sidenav-list').removeClass('sidenav-tx');
     });
 
 
-    $('.plus').click(function(){
+    $('.plus').click(function(event){
+        event.preventDefault();         
         $(this).toggleClass('minus')
         .toggleClass('no-b')
         .next()
         .slideToggle();
     });
-    // $('.header__sign-in .menu-toggle').click(function(event){
-    //     event.preventDefault();        
-    //     if(windowSize<=320) {
-    //         $('.wrapper').removeClass('ml250');
-    //         $('.wrapper').removeClass('ml320');
-    //         $('#nav-icon').toggleClass('open');
-    //         $('#mySidenav').toggleClass('no-tr');
-    //     }else{
-    //         $('#mySidenav').toggleClass('active-class');
-    //         $('.wrapper').toggleClass('ml250');
-    //     }
-    // });
 
-    $('.menu-toggle').click(function(event){
-        event.preventDefault();        
-        if(windowSize<=320) {
+    $('.header__top-line .menu-toggle').click(function(event){
+        event.preventDefault();
+        if(windowSize<=320) { // 320-15(скролл бар)
+            $('.wrapper').removeClass('ml250');            
             $('#nav-icon').toggleClass('open');
-            $('#mySidenav').toggleClass('no-tr');
+            $('.sidenav').toggleClass('ml320');
         }else{
-            $('#mySidenav').toggleClass('active-class');
+            $('.sidenav').toggleClass('active-class');
             $('.wrapper').toggleClass('ml250');
+            $('#nav-icon').toggleClass('open');            
         }
     });
 
-    $('.header__sign-in .menu-toggle').click(function(){
-        $('.wrapper').removeClass('ml250').addClass('ml320');
-        $('.header__sign-in--fixed').css('margin-left','-320px');  
-        $('.sidenav').addClass('active-class--fixed');
+    $('.header__sign-in .menu-toggle').click(function(event){
+        event.preventDefault();   
+        if(windowSize<=320){     
+            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');            
+            $('.wrapper').removeClass('ml250').removeClass('ml320');
+            $('.header__sign-in--fixed').toggleClass('ml0');
+            $('.sidenav').toggleClass('active-class--fixed');
+        }   
+        else{
+            $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');                        
+            $('.wrapper').toggleClass('ml320');            
+            $('.header__sign-in--fixed').toggleClass('ml-320');
+            $('.sidenav').toggleClass('active-class--fixed');
+        }
     });
 
     $('.after-plus .city-link').click(function(event){
@@ -158,11 +165,16 @@ $( document ).ready(function() {
         if($(window).scrollTop() > signInPosition){
             $('.header__sign-in')
             .addClass('header__sign-in--fixed');
-            $('.sidenav').css('top', $('.header__sign-in').outerHeight());
+            $('.sidenav').css({
+                'top': $('.header__sign-in').outerHeight(),
+                'margin-top': '0'
+            });
+            $('.signIn-form-tr').css('top','70px');
         }
         else{
             $('.header__sign-in').removeClass('header__sign-in--fixed');
             $('.sidenav').removeAttr('style');
+            $('.signIn-form-tr').css('top','50px');            
         }
     });
 

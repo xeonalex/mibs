@@ -7,6 +7,8 @@ body {
         line-height: 49px;
         background: $blue;
         color: #fff;
+        position: relative;
+        z-index: 2;
     }
     .version {
         font-family: "proxima_nova_bold";
@@ -177,8 +179,30 @@ body {
     border-radius: 2px;
     border: 1px solid;
     line-height: 0;
-    padding: 6.5px 9px;
+    width: 40px;
+    height: 35px;
     display: none;
+        text-align: center;
+    line-height: 35px;
+    a{
+        vertical-align: middle;
+    }
+    .js-location{
+        img:nth-of-type(2){
+            display: none;
+        }
+        &.init{
+            img{
+                display: none;
+            }
+            img:nth-of-type(2){              
+                display: inline-block !important;
+            }
+        }
+    }
+    .js-zap{
+        display: none;
+    }
 }
 .adress {
     &-wrap {
@@ -593,10 +617,10 @@ body {
     height: 100vh;
     width: 320px;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
-    transform: translateX(-320px);
-    left: 0;
+    // transform: translateX(-320px);
+    left: -320px;
     background-color: #f0f2f5;
     overflow-x: hidden;
     transition: .5s;
@@ -768,16 +792,25 @@ body {
     transform: translateX(-320px);
 }
 .active-class {
-    transform: translateX(-320px);
+    // transform: translateX(-320px);
+    // margin-left: -320px;
+    left: 0px;
 }
 .active-class--fixed {
     margin-left: 320px;
 }
+.ml0 {
+    margin-left: 0;
+}
 .ml250 {
-    transform: translateX(320px);
+    // transform: translateX(320px);
+    margin-left: 320px;
 }
 .ml320 {
-    margin-left: 320px;
+    margin-left: 320px !important;
+}
+.ml-320 {
+    margin-left: -320px;
 }
 .wrapper {
     transition: all .5s;
@@ -789,15 +822,25 @@ body {
     }
 }
 .no-tr {
-    transform: translateX(0px);
+    // transform: translateX(0px);
+    margin-left: 0;
 }
 .header__popup-city {
     display: none;
-    width: 320px;
+    width: 280px;
     margin: 0 auto;
     background: #fff;
     margin-top: 50px;
     padding-top: 20px;
+    position: relative;
+    .popup-close {
+        cursor: pointer;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        right: 0;
+        top: -28px;
+    }
     .container-short {
         // width: 280px;
         margin: 0 auto;
@@ -858,7 +901,7 @@ body {
             }
             .city-sub-list {
                 display: none;
-                width: 320px;
+                width: 280px;
                 margin-left: -20px;
                 padding: 0;
                 li {
@@ -999,6 +1042,9 @@ body {
             font-size: 12px;
         }
     }
+    .menu-toggle{
+        display: none;
+    }
 }
 
 .header__sign-in--fixed {
@@ -1043,6 +1089,9 @@ body {
     }
     .logo-wrap {
         margin-right: 130px;
+    }
+        .menu-toggle{
+        display: block;
     }
 }
 
@@ -1266,6 +1315,10 @@ body {
             display: none;
         }
         &--fixed {
+  
+            .container{
+                margin: 0;
+            }
             .logo-wrap {
                 display: none;
             }
@@ -1381,9 +1434,14 @@ body {
 }
 .signIn-form-tr {
     display: none;
+    position: fixed;
     background: #fff;
     margin: 0 auto;
+    top: 50px;
+    left: -320px;
     width: 320px;
+    z-index: 10;
+    @include t25(); 
     .container-short {
         width: 280px;
         margin: 0 auto;
@@ -1541,7 +1599,7 @@ body {
     .sidenav {
         margin-top: 50px;
     }
-    .sidenav .active-class{
+    .sidenav .active-class {
         margin-top: 0;
         margin-left: 0;
     }
