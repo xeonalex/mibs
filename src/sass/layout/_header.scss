@@ -20,7 +20,7 @@ body {
         float: left;
         text-decoration: none;
         color: #fff;
-        &:hover{
+        &:hover {
             background: #1a6eb4;
         }
         &:before {
@@ -62,11 +62,34 @@ body {
             padding: 0 12px;
             position: relative;
             @include transition(.3s);
+            span {
+                position: relative;
+                &:after {
+                    @include transition(.25s);
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    right: 0;
+                    height: 1px;
+                    width: 100%;
+                    background: #337ebd;
+                }
+            }
             &--active {
                 background: #1a6eb4;
+                span {
+                    &:after {
+                        width: 20%;
+                    }
+                }
             }
             &:hover {
                 background: #1a6eb4;
+                span {
+                    &:after {
+                        width: 20%;
+                    }
+                }
             }
         }
     }
@@ -78,13 +101,12 @@ body {
                 position: relative;
                 label {
                     background-image: url(../img/icons/loupe-dark.png);
-                    background-position: center center;
+                    background-position-y: 14px;
                     background-position-x: 5px;
                     background-repeat: no-repeat;
                     display: block;
                     width: 26px;
                     height: 49px;
-                    padding: 14.5px 0;
                     display: block;
                     z-index: 3;
                     position: relative;
@@ -93,8 +115,8 @@ body {
                 .search-wrap {
                     position: absolute;
                     top: 50%;
-                    line-height: 1;
-                    margin-top: -20px;
+                    // line-height: 1;
+                    margin-top: -26px;
                     left: 0;
                 }
                 .search-m {
@@ -103,7 +125,7 @@ body {
                     border: none;
                     font-size: 16px;
                     background-color: transparent;
-                    padding: 10px 65px 10px 40px;
+                    padding: 7px 65px 7px 40px;
                     -webkit-transition: all .5s ease-in-out;
                             transition: all .5s ease-in-out;
                     outline: none;
@@ -116,10 +138,10 @@ body {
                     display: none;
                     position: absolute;
                     right: 1px;
-                    top: 1px;
+                    top: 9px;
                     color: #fff;
                     border: none;
-                    padding: 11.2px 11px;
+                    padding: 8px 11px;
                     font-size: 14px;
                     background: $blue;
                     z-index: 2;
@@ -134,12 +156,11 @@ body {
         cursor: pointer;
     }
 }
-.input-focus {
-}
+
 .loupe-wrap {
     &.input-focus {
         .search-m {
-            width: 420px !important;
+            width: 445px!important;
             border: 1px solid #ccc !important;
             background: #fff !important;
         }
@@ -147,7 +168,7 @@ body {
             display: block !important;
         }
         + .adress-wrap,
-        + .adress-wrap +.location-wrap {
+        + .adress-wrap + .location-wrap {
             display: none;
         }
     }
@@ -200,25 +221,25 @@ body {
     width: 40px;
     height: 35px;
     display: none;
-        text-align: center;
+    text-align: center;
     line-height: 35px;
-    a{
+    a {
         vertical-align: middle;
     }
-    .js-location{
-        img:nth-of-type(2){
+    .js-location {
+        img:nth-of-type(2) {
             display: none;
         }
-        &.init{
-            img{
+        &.init {
+            img {
                 display: none;
             }
-            img:nth-of-type(2){
+            img:nth-of-type(2) {
                 display: inline-block !important;
             }
         }
     }
-    .js-zap{
+    .js-zap {
         display: none;
     }
 }
@@ -317,7 +338,7 @@ body {
         color: #fff;
         position: relative;
         padding-right: 12px;
-        margin-left: 0.3em;
+        margin-left: .3em;
         span {
             border-bottom: 1px dashed #fff;
         }
@@ -353,6 +374,7 @@ body {
             color: #fff;
             position: relative;
             padding-left: 24px;
+            font-size: 14px !important;
             display: block;
             &:before {
                 content: "";
@@ -360,7 +382,7 @@ body {
                 background: url(../img/icons/flag.png);
                 width: 16px;
                 height: 12px;
-                top: 3px;
+                top: 2px;
                 left: 0;
             }
             &:after {
@@ -779,6 +801,9 @@ body {
         right: 20px;
         top: 17px;
     }
+    &.activee + .accor-list {
+        display: block;
+    }
 }
 .minus {
     position: relative;
@@ -825,7 +850,7 @@ body {
 .active-class {
     // transform: translateX(-320px);
     // margin-left: -320px;
-    left: 0px;
+    left: 0;
 }
 .active-class--fixed {
     margin-left: 320px;
@@ -1030,6 +1055,9 @@ body {
             font-size: 16px;
             font-family: "effrabold";
             margin-right: 33px;
+            &:hover{
+                color: #005eac;
+            }
             &:last-child {
                 margin-right: 0;
             }
@@ -1069,11 +1097,14 @@ body {
     .signUp-wrap {
         .enroll_link {
             color: #fff;
-            background: #f14959;
+            background: #ed1b2f;
             font-size: 12px;
+            &:hover {
+                background: #f14959;
+            }
         }
     }
-    .menu-toggle{
+    .menu-toggle {
         display: none;
     }
 }
@@ -1088,7 +1119,7 @@ body {
     background: $blue;
     z-index: 2;
     .sign-in-wrap {
-        .signUp-tel{
+        .signUp-tel {
             display: none;
         }
         .logo-img {
@@ -1127,7 +1158,6 @@ body {
     .logo-wrap {
         margin-right: 130px;
     }
-
 }
 
 .header__popup-signUp {
@@ -1242,8 +1272,13 @@ body {
                     display: inline-block;
                     padding: 20px 30px;
                     @include border-radius(2px);
+                    @include transition(.3s);
                     color: #424242;
                     text-align: center;
+                    &:hover{
+                        background: #005eac;
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -1265,6 +1300,9 @@ body {
     margin-right: 10px;
     line-height: 70px;
     padding-left: 80px;
+    &:hover{
+        background: #e1e3e5;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -1287,6 +1325,9 @@ body {
     // .tabs-item--active
     &--active {
         background: #fff;
+        &:hover{
+            background: #fff;
+        }
     }
 }
 .mrt {
@@ -1319,33 +1360,33 @@ body {
 .tab-wrapper {
     @include clearfix;
 }
-.header__popup-lang{
+.header__popup-lang {
     @include border-radius(2px);
     display: none;
     width: 280px;
     background: #fff;
     position: relative;
-    .popup-close{
+    .popup-close {
         position: absolute;
         width: 14px;
         height: 14px;
         top: -28px;
         right: 0;
     }
-    .container-short{
+    .container-short {
         margin: 0 auto;
     }
-    .lang-list{
+    .lang-list {
         margin: 0;
         padding: 0;
     }
-    .lang-item{
+    .lang-item {
         cursor: pointer;
         padding: 20px 25px;
         border-bottom: 1px solid #dfe1e2;
         @include clearfix;
         position: relative;
-        &:before{
+        &:before {
             content: "";
             position: absolute;
             width: 17px;
@@ -1354,36 +1395,40 @@ body {
             bottom: 0;
             margin: auto;
         }
-        &.rus{
-            &:before{
+        &.rus {
+            &:before {
                 background: url(../img/icons/flag.png);
             }
         }
-        &.eng{
-            &:before{
+        &.eng {
+            &:before {
                 background: url(../img/icons/flag2.png);
             }
         }
-        &:last-child{
+        &:last-child {
             border-bottom: none;
         }
-        label{
+        label {
             float: left;
             font-size: 16px;
             padding-left: 30px;
         }
-        input{
+        input {
             margin-top: 2px;
             float: right;
             width: 15px;
             height: 15px;
         }
-
     }
 }
 @include breakpoint(1024) {
+    .header__top-line {
+        .version {
+            margin-right: 10px;
+        }
+    }
     .header__sign-in--fixed {
-        .menu-toggle{
+        .menu-toggle {
             display: block;
         }
     }
@@ -1404,7 +1449,7 @@ body {
     }
     .menu-toggle {
         display: block;
-        margin-right: 35px;
+        margin-right: 20px;
     }
     .search-input,
     .version-wrap {
@@ -1418,8 +1463,7 @@ body {
             display: none;
         }
         &--fixed {
-
-            .container{
+            .container {
                 margin: 0;
             }
             .logo-wrap {
@@ -1473,7 +1517,6 @@ body {
     .header {
         .version {
             font-size: 0;
-            margin-right: 20px;
         }
     }
     .header__popup-wrap {
@@ -1694,11 +1737,11 @@ body {
         padding-top: 20px;
         padding-bottom: 30px;
         .tabs-content {
-            background:none;
+            background: none;
         }
     }
     .sidenav .search-input form .search-wrap {
-        .search{
+        .search {
             display: block;
             padding: 11px 75px 11px 15px;
         }
@@ -1753,13 +1796,13 @@ body {
         .logo-wrap {
             margin-right: 0;
         }
-        .menu-toggle{
+        .menu-toggle {
             margin-right: 0;
             padding-right: 0;
         }
-        .signUp-wrap{
-                margin-top: 9px;
-            a{
+        .signUp-wrap {
+            margin-top: 9px;
+            a {
                 padding: 10px 20px;
             }
         }
@@ -1774,14 +1817,14 @@ body {
             height: 30px;
             line-height: 30px;
             text-align: center;
-            img{
+            img {
                 vertical-align: middle;
             }
         }
-        .phone-wrap{
+        .phone-wrap {
             display: none;
         }
-        .signUp-tel{
+        .signUp-tel {
             display: inline-block;
         }
     }

@@ -38,6 +38,7 @@
 		width: 290px;
 	}
 	.telephone {
+	font-family: 'effraregular' !important;		
 		vertical-align: middle;
 		padding-left: 33px;
 		font-family: 'effra';
@@ -51,6 +52,8 @@
 			position: absolute;
 			left: 0;
 			top: 0;
+			bottom: 0;
+			margin: auto;
 			width: 18px;
 			height: 30px;
 			background: {

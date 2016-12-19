@@ -1,4 +1,5 @@
 console.log('hello from script.js');
+
 var windowSize = document.documentElement.clientWidth;
 $( document ).ready(function() {
     $(window).on('resize', function(){
@@ -170,9 +171,18 @@ $( document ).ready(function() {
         }
     });
 
+// $('.about_more-link').click(function(event){
+//     event.preventDefault();
+// 	$('.about_content').toggleClass('about_full');
+//     return false;
+// })
 
-
-
+$('.about_more-link').on("click", function(event) {
+    event.preventDefault();
+    $('.about_content').toggleClass("about_full").prev(".dn")
+      .slideToggle(), 
+      $('.about_content').hasClass("about_full") ? $(this).text("Скрыть содержимое") : $(this).text("Показать полностью")
+})
 
 });
 // Блок "запишитесь"
@@ -182,11 +192,7 @@ $('.tel_mask').mask("+9 (999) 999-99-99");
 // Блок "Лечебно-диагностический центр"
 //
 
-$('.about_more-link').click(function(event){
-    event.preventDefault();
-	$('.about_content').toggleClass('about_full');
-    return false;
-})
+
 
 //
 // БЛОК НОВОСТЕЙ
