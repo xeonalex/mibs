@@ -1879,7 +1879,13 @@ body {
                 .tab-wrapper {
                     display: none;
                     margin-bottom: 20px;
-                    padding: 0 20px;
+                    margin-top: -10px;
+                    background: #fff;
+                    padding: {
+                        top: 10px;
+                        right: 20px;
+                        left: 20px;
+                    }
                 }
                 &:first-of-type {
                     .tab-wrapper {
