@@ -165,7 +165,9 @@ $( document ).ready(function() {
                 'top': $('.header__sign-in').outerHeight(),
                 'margin-top': '0'
             });
-            $('.signIn-form-tr').css('top','70px');
+            $('.signIn-form-tr').css({
+                'top':'70px',
+                'max-height':document.documentElement.clientHeight - 70 + 'px'})
         }
         else{
             $('.header__sign-in').removeClass('header__sign-in--fixed');
