@@ -12,9 +12,10 @@ $( document ).ready(function() {
     $('.country').click(function(){
         $('.flags-wrap').toggleClass('flags-wrap--active');
         $('.flags-country').slideToggle();
+        return false;
     });
 
-    $('.location-city').on('click',function(){
+    $('.location-wrap').on('click',function(){
         $('.header__popup-wrap').bPopup({
             transition: 'slideBack',
             transitionClose: 'slideIn',
@@ -33,7 +34,7 @@ $( document ).ready(function() {
         }
     });
 
-    $('.signUp-wrap .enroll_link').on('click',function(){
+    $('.signUp-wrap .enroll_link , .footer .enroll_link').on('click',function(){
         if (windowSize>320) {
             $('.header__popup-signUp').bPopup({
                 transition: 'slideBack',
@@ -46,28 +47,16 @@ $( document ).ready(function() {
         return false;
     });
 
+    /* ВЫЗОВ ФОРМЫ ПОИСКА */
     $('.search-label').click(function(){
-        $('.search-m').toggleClass('input-focus');
-        if ($('.search-m').hasClass('input-focus')){
-            $('.btn-search').css('display','block');
-            $('.adress-wrap, .location-wrap').css('opacity','0');
-        }else{
-            $('.btn-search').css('display','none');
-            $('.adress-wrap, .location-wrap').removeAttr('style');
-        }
+        $('.loupe-wrap').toggleClass('input-focus');
     });
 
-
-    // $('.menu-toggle').click(function(){
-	// 	$('#nav-icon').toggleClass('open');
-    //     $('#mySidenav').toggleClass('active-class');
-    //     $('.wrapper').toggleClass('ml250');
-	// });
-    $('.closebtn').click(function(){
-        $('#mySidenav').removeClass('active-class');
-        $('.wrapper').css('margin-left', '0px');
-    });
-
+    // $('.closebtn').click(function(){
+    //     $('#mySidenav').removeClass('active-class');
+    //     $('.wrapper').css('margin-left', '0px');
+    // });
+    // внутренние переходы сайдбара
     $('.lvlin').click(function(event){
         event.preventDefault();
          $('.sidenav-list').addClass('sidenav-tx');
@@ -76,7 +65,6 @@ $( document ).ready(function() {
         event.preventDefault();
         $('.sidenav-list').removeClass('sidenav-tx');
     });
-
 
     $('.plus').click(function(event){
         event.preventDefault();
@@ -91,7 +79,7 @@ $( document ).ready(function() {
         // ВЫЗОВ САЙДБАРА
     $('.menu-toggle').click(function(event){
         event.preventDefault();
-        $('#nav-icon').toggleClass('open'); // меняем класс для гамбургера
+        $('.nav-icon').toggleClass('open'); // меняем класс для гамбургера
         if(windowSize<=320) {
             $('.wrapper').removeClass('ml250');
             $('.sidenav').toggleClass('active-class');
@@ -112,56 +100,6 @@ $( document ).ready(function() {
             }
         }
     });
-    // вже не треба ||
-    //          ||
-    //          ||
-    //          >
-                                    //     $('.header__top-line .menu-toggle').click(function(event){
-                                    //         event.preventDefault();
-                                    //         if(windowSize<=320) {
-                                    //             // $('.wrapper').removeClass('ml250');
-                                    //             // // $('#nav-icon').toggleClass('open');
-                                    //             // $('.sidenav').toggleClass('ml320');
-                                    //         }else{
-                                    //             // $('.sidenav').toggleClass('active-class');
-                                    //             // if ($('.sidenav').hasClass('active-class')) {
-                                    //             //     $('html,body').css('overflow-x','hidden');
-                                    //             // } else {
-                                    //             //     $('html, body').removeAttr('style');
-                                    //             // }
-                                    //             // $('.wrapper').toggleClass('ml250');
-                                    //             // $('#nav-icon').toggleClass('open');
-                                    //         }
-                                    //     });
-
-                                    //     $('.header__sign-in .menu-toggle').click(function(event){
-                                    //         event.preventDefault();
-                                    //         if(windowSize<=320){
-                                    //             // // $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
-                                    //             // $('.wrapper').removeClass('ml250').removeClass('ml320');
-                                    //             // $('.header__sign-in--fixed').toggleClass('ml0');
-                                    //             // $('.sidenav').toggleClass('active-class--fixed');
-                                    //         }
-                                    //         else{
-                                    //             // $('.header__sign-in .menu-toggle #nav-icon').toggleClass('open');
-                                    //             // $('.wrapper').toggleClass('ml320');
-                                    //             // $('.header__sign-in--fixed').toggleClass('ml-320');
-                                    //             // $('.sidenav').toggleClass('active-class--fixed');
-                                    //         };
-
-                                    // // // =======
-                                    // //     $('.header__sign-in .menu-toggle').click(function(){
-                                    // //         $('.wrapper').removeClass('ml250').addClass('ml320');
-                                    // //         $('.header__sign-in--fixed').css('margin-left','-320px');
-                                    // //         $('.sidenav').addClass('active-class--fixed');
-                                    // // // >>>>>>> 23338970a1ad3cee37e387bda8e7ebec3386ce8a
-                                    //     });
-
-    //           ^
-    //          ||
-    //          ||
-    // вже не треба ||
-
 
     $('.after-plus .city-link').click(function(event){
         event.preventDefault();
@@ -205,20 +143,6 @@ $( document ).ready(function() {
         return false;
     });
 
-    $('.footer .enroll_link').on('click', function(event){
-        event.preventDefault();
-        if(windowSize > 320){
-            $('.signIn-form-tr').bPopup({
-                transition: 'slideBack',
-                transitionClose: 'slideIn',
-                closeClass:'popup-close'
-            });
-            return false;
-        } else {
-            window.location.hash = $(this).attr('href');
-        }
-    });
-
     var signIn = $('.header__sign-in');
     var signInPosition = signIn.offset().top;
     signInPosition += signIn.outerHeight();
@@ -258,8 +182,10 @@ $('.tel_mask').mask("+9 (999) 999-99-99");
 // Блок "Лечебно-диагностический центр"
 //
 
-$('.about_more-link').click(function(){
+$('.about_more-link').click(function(event){
+    event.preventDefault();
 	$('.about_content').toggleClass('about_full');
+    return false;
 })
 
 //

@@ -6,7 +6,7 @@ header.header
             .menu-adaprive-wrap
                 .menu-toggle
                     .icon
-                        #nav-icon
+                        .nav-icon
                             span
                             span
                             span
@@ -134,14 +134,20 @@ header.header
                 //- img.loupe-img(src="img/icons/loupe.png", alt="")
             .adress-wrap
                 a(href="#").adress-title
-                    | Адреса клиник
+                    span
+                        | Адреса клиник
                 .adress-map
                     ul
-                        li 6-я Советская, дом 24-26
-                        li 6-я Советская, дом 24-26
-                        li 6-я Советская, дом 24-26
-                        li 6-я Советская, дом 24-26
-                        li 6-я Советская, дом 24-26
+                        li
+                            a(href='#') 6-я Советская, дом 24-26
+                        li
+                            a(href='#') Удельный пр., дом 22A
+                        li
+                            a(href='#') ул.Костюшко, дом 2
+                        li
+                            a(href='#') пр. Солидарности, д.4
+                        li
+                            a(href='#') ул. Есенина, д.2, корпус 3
             .location-wrap
                 span(href="#").location-title
                     | Ваш город:
@@ -150,10 +156,12 @@ header.header
                         | Санкт-Петербург
             .flags-wrap
                 a(href="#").country
-                    | RU
+                    span
+                        | RU
                 .flags-country
                     a(href="#")
-                        | EN
+                        span
+                            | EN
 
 
     .header__sign-in
@@ -165,7 +173,7 @@ header.header
                         img.logo-img-h(src="img/logo_white.svg", alt="")
                 .menu-toggle
                     .icon
-                        #nav-icon
+                        .nav-icon
                             span
                             span
                             span
