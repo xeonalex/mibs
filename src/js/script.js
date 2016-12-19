@@ -2,6 +2,10 @@ console.log('hello from script.js');
 
 var windowSize = document.documentElement.clientWidth;
 $( document ).ready(function() {
+    
+
+
+
     $(window).on('resize', function(){
         windowSize = document.documentElement.clientWidth;
     });
@@ -169,8 +173,21 @@ $( document ).ready(function() {
             $('.signIn-form-tr').css('top','50px');
             $('.header__sign-in').removeClass('ml-320');
         }
+    
+        // arrow-up
+            if($(window).scrollTop() >= 400){
+                $(".arrow-up").fadeIn();
+            }
+            else{
+                $(".arrow-up").fadeOut();
+            }
+
     });
 
+    $(".arrow-up").click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 // $('.about_more-link').click(function(event){
 //     event.preventDefault();
 // 	$('.about_content').toggleClass('about_full');
@@ -205,5 +222,5 @@ $('.about_more-link').on("click", function(event) {
     // Блок "запишитесь"
     $('.tel_mask').mask("+9 (999) 999-99-99");
 
-
+    
 }); // конец document.ready
