@@ -113,7 +113,7 @@
         }
     }
 }
-@include breakpoint(320) {
+@include breakpoint(480) {
     .enroll {
         .container {
             padding:  {
@@ -262,7 +262,7 @@
 // mobile
 //
 //
-@include breakpoint(320) {
+@include breakpoint(480) {
     .about_content {
         height: 150px;
     }

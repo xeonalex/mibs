@@ -67,12 +67,14 @@ html, body {
         }
     }
 }
-@include breakpoint(320) {
+@include breakpoint(480) {
     html, body{
+        max-width: 480px;
+        width: 100%;
         min-width: 320px;
     }
     .container {
-        width: 320px;
+        width: 100%;
         padding: {
             left: 20px;
             right: 20px;
