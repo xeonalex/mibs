@@ -1,4 +1,5 @@
 console.log('hello from script.js');
+
 var windowSize = document.documentElement.clientWidth;
 $( document ).ready(function() {
     $(window).on('resize', function(){
@@ -170,26 +171,39 @@ $( document ).ready(function() {
         }
     });
 
+// $('.about_more-link').click(function(event){
+//     event.preventDefault();
+// 	$('.about_content').toggleClass('about_full');
+//     return false;
+// })
 
-
-
-
-});
 
 //
 // Блок "Лечебно-диагностический центр"
 //
-
-$('.about_more-link').click(function(event){
+$('.about_more-link').on("click", function(event) {
     event.preventDefault();
-    $('.about_content').toggleClass('about_full');
-    return false;
-})
+    var span = $(this).find('span:first-child'),
+        text=$(this).data('text');
+     $('.about_content').toggleClass('about_full');
+     $(this).toggleClass('opened');
+     // меняем текст из дата атрибута
+     span.data('text',span.text());  // ставим в дата атрибут текст спана
+     span.text(text); // а в спан текст из дата атребута
 
-//
-// БЛОК НОВОСТЕЙ
-//
-$('.slider-wrap').bxSlider({
+        return false;
 });
-// Блок "запишитесь"
-$('.tel_mask').mask("+9 (999) 999-99-99");
+
+
+    // >>>>>>> 89e36897e1cb0239158d4f280c5d60b0be6b3247
+
+    //
+    // БЛОК НОВОСТЕЙ
+    //
+    $('.slider-wrap').bxSlider({
+    });
+    // Блок "запишитесь"
+    $('.tel_mask').mask("+9 (999) 999-99-99");
+
+
+}); // конец document.ready

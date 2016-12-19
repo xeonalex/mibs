@@ -27,7 +27,7 @@ header.header
                                     a(href="#").back
                                         | Назад
                                 li
-                                    a.plus(href="#")
+                                    a.plus.minus.activee(href="#")
                                         | Лучевая диагностика
                                     ul.accor-list
                                         li
@@ -114,14 +114,9 @@ header.header
                 | Версия для слабовидящих
             ul.header__menu_list
                 each item in menu_items
-                    if item == "Партнеры"
-                        li.header__menu_item
-                            a.header__menu_link.header__menu_link--active(href="#")
-                                span=item
-                    else
-                        li.header__menu_item
-                            a.header__menu_link(href="#")
-                                span=item
+                    li.header__menu_item
+                        a.header__menu_link(href="#")
+                            span=item
             .loupe-wrap
                 form
                     label.search-label(for="search")

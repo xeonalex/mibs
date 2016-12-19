@@ -9,7 +9,8 @@
 }
 .stat_list {
 	@include clearfix;
-	font-size: 0;
+	font-size: 1px;
+	line-height: 0;
 	text-align: justify;
 	&:after{
 		content: '';
@@ -234,7 +235,8 @@
 ///
 .departments {
 	.container {
-		font-size: 0;
+		font-size: 1px;
+		line-height: 0;
 		text-align: justify;
 		&:after{
 			display: inline-block;
@@ -250,14 +252,17 @@
 	display: inline-block;
 	text-align: left;
 	font-size: 14px;
+	line-height: 19px;
 	vertical-align: top;
 	position: relative;
 	color: #fff;
+	background: {
+		size: cover;
+		position: center;
+		repeat: no-repeat;
+	}
 	&.big{
 		width: 588px;
-		.department_img-wrap {
-			width: 588px;
-		}
 		padding: 20px 20px 66px 20px;
 		.department_title{
 			line-height: 1;
@@ -269,21 +274,7 @@
 		position: relative;
 		z-index: 1;
 	}
-	.department_img-wrap {
-		position: absolute;
-		z-index: 0;
-		top: 0;
-		left: 0;
-		width: 283px;
-		height: 280px;
-		overflow: hidden;
-		text-align: center;
-		img{
-			display: inline-block;
-		    max-width: none;
-		    max-height: 100%;
-		}
-	}
+
 	.department_title{
 		font-family: 'effraheavy';
 		font-size: 28px;
@@ -322,16 +313,9 @@
 		height: 220px;
 		&.big{
 			width: 460px;
-			.department_img-wrap {
-				width: 460px;
-			}
 			.department_title{
 				font-size: 58px;
 			}
-		}
-		.department_img-wrap {
-			width: 238px;
-			height: 220px;
 		}
 		.depertment_text{
 			max-width: 340px;
@@ -349,24 +333,12 @@
 		height: 220px;
 		&.big{
 			width: 327px;
-			.department_img-wrap {
-				width: 327px;
-			}
 			.department_title{
 				font-size: 58px;
 			}
 		}
 		.depertment_text{
 			max-width: 100%;
-		}
-		.department_img-wrap {
-			width: 199px;
-			height: 220px;
-			img{
-				max-width: none;
-				max-height: 100%;
-			}
-
 		}
 		.department_title{
 			font-size: 16px;
@@ -391,18 +363,10 @@
 		}
 		&.big{
 			width: 100%;
-			.department_img-wrap {
-				display: block;
-				max-width: 320px;
-			}
 			.department_title{
 				font-size: 48px;
 				margin-bottom: 0;
 			}
-		}
-		.department_img-wrap {
-			width: 320px;
-			height: 245px;
 		}
 		.department_title{
 			font-size: 28px;

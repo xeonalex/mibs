@@ -1,67 +1,70 @@
 .enroll {
-	background-color: $blue;
-	@include clearfix;
-	.container {
-		line-height: 1;
-		text-align: justify;
-		font-size: 0;
-	    padding: {
-	    	top: 28.3px;
-	    	bottom: 28.3px;
-	    }
-		&:after {
-			display: inline-block;
-			content: '';
-			height: 0;
-			width: 100%;
-		}
-	}
+    background-color: $blue;
+    @include clearfix;
+    .container {
+        line-height: 0;
+        text-align: justify;
+        font-size: 1px;
+        padding:  {
+            top: 28.3px;
+            bottom: 28.3px;
+        }
+        &:after {
+            display: inline-block;
+            content: "";
+            height: 0;
+            width: 100%;
+        }
+    }
 }
 
 .enroll_title {
-	color: #fff;
-	font-size: 36px;
-	display: inline-block;
-	font-weight: 400;
-	vertical-align: middle;
+    color: #fff;
+    font-size: 36px;
+    display: inline-block;
+    font-weight: 400;
+    vertical-align: middle;
 }
 
 .enroll_link {
-	 @extend .btn;
-	 padding: 17px 31px;
-	 border: none;
-	 outline: none;
-	 line-height: 1;
+    @extend .btn;
+    padding: 17px 31px;
+    border: none;
+    outline: none;
+    line-height: 1;
 }
 .enroll_form {
-	vertical-align: middle;
-	display: inline-block;
-	@include clearfix;
-	font-size: 16px;
-	// внутренние
-	.enroll_label {
-		display: block;
-		float: left;
-		@include border-radius($radius: 2px);
-		background-color: #fff;
-		padding: 12.6px 18px;
-		line-height: 1;
-	}
-	.enroll_label_text{
-		font-size: 14px;
-	}
-	.enroll_tel {
-		width: 211px;
-		border: none;
-		padding-left: 20px;
-		&:focus {
-			outline: none;
-		}
-	}
-	.enroll_link {
-		 @extend .btn-red;
-		 margin-left: -2px;
-	}
+    vertical-align: middle;
+    display: inline-block;
+    @include clearfix;
+    font-size: 16px;
+    // внутренние
+    .enroll_label {
+        display: block;
+        float: left;
+        @include border-radius($radius: 2px);
+        background-color: #fff;
+        padding: 12.6px 18px;
+        line-height: 1;
+    }
+    .enroll_label_text {
+        font-size: 14px;
+    }
+    .enroll_tel {
+        width: 211px;
+        border: none;
+        padding-left: 20px;
+        &:focus {
+            outline: none;
+        }
+    }
+    .enroll_link {
+        @extend .btn-red;
+        margin-left: -2px;
+        &:hover {
+            background: #f1495f 9px;
+        }
+    }
 }
 
 
@@ -69,87 +72,84 @@
 //
 //
 @include breakpoint(1024) {
-	.enroll_title {
-		font-size: 30px;
-	}
-	.enroll_form {
-		.enroll_label {
-
-		}
-		.enroll_label_text{
-		}
-		.enroll_tel {
-			width: 156px;
-			padding-left: 10px;
-		}
-		.enroll_link {
-
-		}
-	}
+    .enroll_title {
+        font-size: 30px;
+    }
+    .enroll_form {
+        .enroll_label {
+        }
+        .enroll_label_text {
+        }
+        .enroll_tel {
+            width: 156px;
+            padding-left: 10px;
+        }
+        .enroll_link {
+        }
+    }
 }
 @include breakpoint(768) {
-	.enroll {
-		.container {
-			padding: 21.9px 15px;
-		}
-	}
+    .enroll {
+        .container {
+            padding: 21.9px 15px;
+        }
+    }
 
-	.enroll_title {
-		font-size: 30px;
-		width: 250px;
-		text-align: left;
-	}
-	.enroll_form {
-		.enroll_label {
-		    padding: 12.6px 16px;
-		}
-		.enroll_label_text{
-		}
-		.enroll_tel {
-			width: 118px;
-		}
-		.enroll_link {
-
-		}
-	}
+    .enroll_title {
+        font-size: 30px;
+        width: 250px;
+        text-align: left;
+    }
+    .enroll_form {
+        .enroll_label {
+            padding: 12.6px 16px;
+        }
+        .enroll_label_text {
+        }
+        .enroll_tel {
+            width: 118px;
+        }
+        .enroll_link {
+        }
+    }
 }
 @include breakpoint(320) {
-	.enroll {
-		.container {
-		    padding: {
-		    	top: 36px;
-		    	bottom: 36px;
-		    }
-		}
-	}
-	.enroll_title {
-		display: block;
-		text-align: center;
-		font-size: 24px;
-		width: 100%;
-		margin-bottom: 32px;
-	}
-	.enroll_form {
-		display: block;
-		.enroll_label {
-			display: block;
-			width: 100%;
-			float: none;
-			padding: 12.6px 18px;
-		}
-		.enroll_label_text{
-		}
-		.enroll_tel {
-			width: 190px;
-			padding-left: 20px;
-		}
-		.enroll_link {
-			width: 100%;
-			display: block;
-			margin-left: 0;
-			margin-top: 10px;
-		}
-	}
+    .enroll {
+        .container {
+            padding:  {
+                top: 36px;
+                bottom: 36px;
+            }
+        }
+    }
+    .enroll_title {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .enroll_form {
+        display: block;
+        .enroll_label {
+            display: block;
+            width: 100%;
+            float: none;
+            padding: 12.6px 18px;
+        }
+        .enroll_label_text {
+        }
+        .enroll_tel {
+            width: 190px;
+            padding-left: 20px;
+        }
+        .enroll_link {
+            width: 100%;
+            display: block;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
 }
 
 
@@ -158,107 +158,119 @@
 //
 
 .about {
-	background-color: #f0f2f5;
-	.container {
-	    padding: {
-	    	top: 49px;
-	    	bottom: 49px;
-	    }
-	}
+    background-color: #f0f2f5;
+    .container {
+        padding:  {
+            top: 49px;
+            bottom: 49px;
+        }
+    }
 }
 .about_title {
-	font-size: 36px;
-	margin-bottom: 15px;
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 .about_content {
-	transition: all 0.5s;
-	line-height: 21px;
-	font-size: 14px;
-	height: 90px;
-	overflow: hidden;
-	p{
-		margin-bottom: 5px;
-	}
+    transition: all .5s;
+    line-height: 21px;
+    font-size: 14px;
+    height: 90px;
+    overflow: hidden;
+    p {
+        margin-bottom: 5px;
+    }
 }
 .about_content.about_full {
-	height: auto;
-	+ .about_more-link{
-		margin-top: 0;
-		&:before {
-			display: none;
-		}
-	}
+    height: auto;
+    + .about_more-link {
+        margin-top: 10px;
+        &:before {
+            display: none;
+        }
+    }
+}
+.hidden_content {
+    display: none;
 }
 .about_more-link {
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	margin-top: -40px;
-	span {
-		font-size: 14px;
-		font-weight: 600;
-		color: $blue;
-		border-bottom: 1px dashed $blue;
-	}
-	&:before {
-		content: '';
-		display: block;
-		height: 40px;
-		margin-bottom: 15px;
-		position: relative;
-		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(240,242,245,0.45) 29%, rgba(240,242,245,0.6) 39%, rgba(240,242,245,1) 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(240,242,245,0.45) 29%,rgba(240,242,245,0.6) 39%,rgba(240,242,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(240,242,245,0.45) 29%,rgba(240,242,245,0.6) 39%,rgba(240,242,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f0f2f5',GradientType=0 ); /* IE6-9 */
-	}
-	.arrow{
-		margin-left: 8px;
-		display: inline-block;
-		vertical-align: middle;
-		width: 20px;
-		height: 20px;
-		border: 1px solid #babbbc;
-		&:after {
-			content: '';
-			display: block;
-			width: 20px;
-			height: 20px;
-			background: {
-				image: url(../img/icons/arrow-down_outline.png);
-				repeat: no-repeat;
-				position: center;
-			}
-		}
-	}
-	&:hover {
-		span {
-			color: $footer-dark;
-			border-bottom: 1px dashed $footer-dark;
-		}
-		.arrow{
-			background-color: $footer-dark;
-			border: 1px solid $footer-dark;
-			&:after {
-				background: {
-					image: url(../img/icons/arrow-down_outline_white.png);
-				}
-			}
-		}
-	}
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: -40px;
+    span {
+        font-size: 14px;
+        font-weight: 600;
+        color: $blue;
+        border-bottom: 1px dashed $blue;
+    }
+    &:before {
+        content: "";
+        display: block;
+        height: 40px;
+        margin-bottom: 15px;
+        position: relative;
+        background:    -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(240,242,245,.45) 29%, rgba(240,242,245,.6) 39%, rgba(240,242,245,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(240,242,245,.45) 29%,rgba(240,242,245,.6) 39%,rgba(240,242,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background:         linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(240,242,245,.45) 29%,rgba(240,242,245,.6) 39%,rgba(240,242,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f0f2f5',GradientType=0 ); /* IE6-9 */
+    }
+    .arrow {
+        margin-left: 8px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #babbbc;
+        &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background:  {
+                image: url(../img/icons/arrow-down_outline.png);
+                repeat: no-repeat;
+            }
+            background-position-x: 4px;
+            background-position-y: 7px;
+        }
+    }
+    &:hover {
+        span {
+            color: $footer-dark;
+            border-bottom: 1px dashed $footer-dark;
+        }
+        .arrow {
+            background-color: $footer-dark;
+            border: 1px solid $footer-dark;
+            &:after {
+                background:  {
+                    image: url(../img/icons/arrow-down_outline_white.png);
+                }
+            }
+        }
+    }
 }
-
+.about_more-link.opened {
+    .arrow {
+        &:after {
+            background-position-x: 5px;
+            background-position-y: 7px;
+            transform: rotate(180deg);
+        }
+    }
+}
 // mobile
 //
 //
 @include breakpoint(320) {
-	.about_content {
-		height: 150px;
-	}
-	.about_more-link {
-		text-align: left;
-	}
-	.about_title {
-		font-size: 24px;
-		margin-bottom: 25px;
-	}
+    .about_content {
+        height: 150px;
+    }
+    .about_more-link {
+        text-align: left;
+    }
+    .about_title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
 }
