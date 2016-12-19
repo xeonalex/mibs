@@ -184,13 +184,12 @@ $( document ).ready(function() {
 $('.about_more-link').on("click", function(event) {
     event.preventDefault();
     var span = $(this).find('span:first-child'),
-        text=$(this).data('text');
+        dataText = $(this).data('text');
      $('.about_content').toggleClass('about_full');
      $(this).toggleClass('opened');
      // меняем текст из дата атрибута
-     span.data('text',span.text());  // ставим в дата атрибут текст спана
-     span.text(text); // а в спан текст из дата атребута
-
+     $(this).data("text", span.text() );  // ставим в дата атрибут текст спана
+     span.text(dataText); // а в спан текст из дата атребута
         return false;
 });
 
