@@ -192,7 +192,7 @@
 		}
 	}
 }
-@include breakpoint(320) {
+@include breakpoint(480) {
 	.stat_list {
 		margin-top: -25px;
 		.stat_item {
@@ -347,7 +347,7 @@
 		}
 	}
 }
-@include breakpoint(320) {
+@include breakpoint(480) {
 	.departments {
 		.container {
 			padding: 0;

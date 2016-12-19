@@ -36,7 +36,7 @@ $( document ).ready(function() {
     });
 
     $('.signUp-wrap .enroll_link , .footer .enroll_link').on('click',function(){
-        if (windowSize>320) {
+        if (windowSize>480) {
             $('.header__popup-signUp').bPopup({
                 transition: 'slideBack',
                 transitionClose: 'slideIn',
@@ -81,7 +81,7 @@ $( document ).ready(function() {
     $('.menu-toggle').click(function(event){
         event.preventDefault();
         $('.nav-icon').toggleClass('open'); // меняем класс для гамбургера
-        if(windowSize<=320) {
+        if(windowSize<=480) {
             $('.wrapper').removeClass('ml250');
             $('.sidenav').toggleClass('active-class');
         } else {
@@ -154,7 +154,7 @@ $( document ).ready(function() {
         if($(window).scrollTop() > signInPosition){
             $('.header__sign-in')
             .addClass('header__sign-in--fixed');
-            if ($('.sidenav').hasClass('active-class') && windowSize >320) {
+            if ($('.sidenav').hasClass('active-class') && windowSize >480) {
                 $('.header__sign-in').addClass('ml-320');
             }
             $('.sidenav').css({

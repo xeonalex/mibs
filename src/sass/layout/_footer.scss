@@ -38,7 +38,7 @@
 		width: 290px;
 	}
 	.telephone {
-	font-family: 'effraregular' !important;		
+	font-family: 'effraregular' !important;
 		vertical-align: middle;
 		padding-left: 33px;
 		font-family: 'effra';
@@ -328,7 +328,7 @@
 		}
 	}
 }
-@include breakpoint(320) {
+@include breakpoint(480) {
 	.footer {
 		background: $footer-light;
 		.footer-left,
