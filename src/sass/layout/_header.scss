@@ -768,6 +768,7 @@ body {
         font-family: "effrabold";
         text-decoration: none;
         margin: 0 auto;
+        padding: 15px 0 !important;
         font-size: 20px;
         display: block;
         -webkit-transition: .3s;
@@ -785,8 +786,9 @@ body {
             background: url(../img/icons/eye.png);
             width: 24px;
             height: 14px;
-            top: 18px;
-            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
             display: block;
             cursor: pointer;
         }

@@ -176,10 +176,10 @@ $( document ).ready(function() {
     
         // arrow-up
             if($(window).scrollTop() >= 400){
-                $(".arrow-up").fadeIn();
+                $(".arrow-up").fadeIn('fast');
             }
             else{
-                $(".arrow-up").fadeOut();
+                $(".arrow-up").fadeOut('fast');
             }
 
     });
