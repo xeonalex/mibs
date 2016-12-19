@@ -1429,11 +1429,12 @@ body {
     }
 }
 .arrow-up{
+    display: none;
     cursor: pointer;
     position: fixed;
     bottom: 50px;
-    right: 20px;    
-    z-index: 2; 
+    right: 20px;
+    z-index: 2;
     background: #3880bd;
     @include border-radius(2px);
     width: 50px;
