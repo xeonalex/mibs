@@ -1069,7 +1069,7 @@ body {
     .signUp-wrap {
         .enroll_link {
             color: #fff;
-            background: #f14959;
+            @extend .btn-red;
             font-size: 12px;
         }
     }

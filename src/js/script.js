@@ -175,8 +175,6 @@ $( document ).ready(function() {
 
 
 });
-// Блок "запишитесь"
-$('.tel_mask').mask("+9 (999) 999-99-99");
 
 //
 // Блок "Лечебно-диагностический центр"
@@ -184,7 +182,7 @@ $('.tel_mask').mask("+9 (999) 999-99-99");
 
 $('.about_more-link').click(function(event){
     event.preventDefault();
-	$('.about_content').toggleClass('about_full');
+    $('.about_content').toggleClass('about_full');
     return false;
 })
 
@@ -193,3 +191,5 @@ $('.about_more-link').click(function(event){
 //
 $('.slider-wrap').bxSlider({
 });
+// Блок "запишитесь"
+$('.tel_mask').mask("+9 (999) 999-99-99");
