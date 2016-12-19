@@ -2,6 +2,10 @@ console.log('hello from script.js');
 
 var windowSize = document.documentElement.clientWidth;
 $( document ).ready(function() {
+    
+
+
+
     $(window).on('resize', function(){
         windowSize = document.documentElement.clientWidth;
     });
@@ -161,7 +165,9 @@ $( document ).ready(function() {
                 'top': $('.header__sign-in').outerHeight(),
                 'margin-top': '0'
             });
-            $('.signIn-form-tr').css('top','70px');
+            $('.signIn-form-tr').css({
+                'top':'70px',
+                'max-height':document.documentElement.clientHeight - 70 + 'px'})
         }
         else{
             $('.header__sign-in').removeClass('header__sign-in--fixed');
@@ -169,8 +175,21 @@ $( document ).ready(function() {
             $('.signIn-form-tr').css('top','50px');
             $('.header__sign-in').removeClass('ml-320');
         }
+    
+        // arrow-up
+            if($(window).scrollTop() >= 400){
+                $(".arrow-up").fadeIn('fast');
+            }
+            else{
+                $(".arrow-up").fadeOut('fast');
+            }
+
     });
 
+    $(".arrow-up").click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 // $('.about_more-link').click(function(event){
 //     event.preventDefault();
 // 	$('.about_content').toggleClass('about_full');
@@ -204,5 +223,5 @@ $('.about_more-link').on("click", function(event) {
     // Блок "запишитесь"
     $('.tel_mask').mask("+9 (999) 999-99-99");
 
-
+    
 }); // конец document.ready
