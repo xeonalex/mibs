@@ -269,14 +269,15 @@
 		.services-wrap {
 			padding-left: 10px;
 			width: 120px;
+		    margin-right: 30px;
 		}
 		.footer-menu {
 			width: 140px;
-			padding-left: 50px;
+			padding-left: 40px;
 		}
 		.other-links {
-			width: 140px;
-			padding-left: 40px;
+			width: 120px;
+			padding-left: 0px;
 		}
 	}
 }
@@ -308,11 +309,14 @@
 			padding-left: 55px;
 			.services-wrap {
 				padding-left: 0;
-				width: 140px;
+				width: 50%;
+				padding-right: 14px;
+				margin-right: 0;
 			}
 			.footer-menu {
-				width: 167px;
-				padding-left: 20px;
+				width: 50%;
+				padding-left: 0;
+				margin-right: 0;
 			}
 			.other-links {
 				&:before {
@@ -351,6 +355,7 @@
 				line-height: 20px;
 				margin-bottom: 26px;
 				padding: 0 20px;
+				font-size: 16px;
 			}
 			.other-links a {
 				color: #fff;
@@ -390,6 +395,9 @@
 			display: block;
 			width: auto;
 			margin-bottom: 20px;
+			.number {
+				font-size: 28px;
+			}
 		}
 		.location-wrap {
 			margin-bottom: 40px;
