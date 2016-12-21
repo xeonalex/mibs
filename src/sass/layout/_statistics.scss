@@ -282,6 +282,17 @@
 			margin-bottom: 0;
 		}
 	}
+	.depertment_text,
+	.department_link {
+		@include t25();
+		opacity: 0;
+	}
+	&:hover {
+		.depertment_text,
+		.department_link {
+			opacity: 1;
+		}
+	}
 	> * {
 		position: relative;
 		z-index: 1;
