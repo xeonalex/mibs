@@ -3,7 +3,7 @@
     .container {
         padding:  {
             top: 45px;
-            bottom: 45px;
+            bottom: 65px;
         }
     }
 }
@@ -11,8 +11,8 @@
 /********* левая сторона ************/
 
 .news_container {
-    width: 50%;
     padding-right: 10px;
+    padding-top: 20px;
     display: table-cell;
     vertical-align: top;
     color: #424242;
@@ -86,32 +86,28 @@
 .slide-note {
     font-size: 14px;
 }
-.slide-block {
-    .slide-note {
-        margin-top: 50px;
-    }
-}
 .slide_wrapper {
-    padding-top: 100px;
+    display: table;
+    padding: 90px 20px 20px 50px;
     background-position: right center ;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 280px;
+    height: 385px;
     width: 100%;
-
+    .slide-top {
+        display: table-row;
+        height: 100%;
+    }
     .slide-title {
         font-family: "effrabold";
         color: #424242;
-        font-size: 82px;
+        font-size: 83.5px;
         font-weight: 600;
         line-height: 1.1;
     }
     .slide-subtitle {
         font-family: "effraregular";
         font-size: 36px;
-    }
-    .slide-note {
-        display: none;
     }
 }
 // КАСТОМНЫЕ СТИЛИ слайдера
@@ -163,15 +159,29 @@
 
 ////  МОБИЛЬНАЯ ВЕРСИЯ
 @include breakpoint(1024) {
+    .news_container {
+        padding-top: 0;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .news_slider-container {
+        padding-top: 50px;
+    }
+    .news_block-title {
+        margin-bottom: 10px;
+    }
+    .news_item {
+        height: 110px;
+    }
     .news_list {
         columns: 220px 2;
     }
     .slide_wrapper {
         height: 310px;
-        padding-top: 80px;
+        padding-top: 75px;
         padding-left: 45px;
         padding-right: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         .slide-title {
             font-size: 60px;
         }
@@ -196,6 +206,12 @@
 }
 
 @include breakpoint(768) {
+    .news_container {
+        padding-bottom: 55px;
+    }
+    .news_slider-container {
+        padding-top: 0;
+    }
     .news_list {
         columns: 220px 1;
     }
@@ -205,6 +221,7 @@
     }
     .news_item {
         margin-bottom: 10px;
+        height: 80px;
     }
     .slide_wrapper {
         height: 245px;
@@ -263,8 +280,9 @@
     }
     .slide_wrapper {
         height: 245px;
-        padding-top: 80px;
+        padding-top: 50px;
         padding-left: 20px;
+        padding-bottom: 25px;
         .slide-title {
             font-size: 42px;
         }
