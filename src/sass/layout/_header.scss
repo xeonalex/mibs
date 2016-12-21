@@ -1036,7 +1036,10 @@ body {
     background: #fff;
     height: 100px;
     .sign-in-wrap {
-        padding: 27px 0;
+        padding: 30px 0;
+        .signUp-tel {
+            display: none;
+        }
     }
     .container {
         @include clearfix;
@@ -1230,7 +1233,7 @@ body {
     }
 }
 .intro-wrapper {
-    margin-top: 60px;
+    margin-top: 55px;
     margin-bottom: 60px;
     .tabs-wrap {
         @include clearfix;
@@ -1299,6 +1302,7 @@ body {
                 width: 340px;
                 float: right;
                 font-size: 14px;
+                line-height: 19px;
                 p {
                     margin-bottom: 25px;
                     color: #353535;
@@ -1340,6 +1344,7 @@ body {
     margin-right: 10px;
     line-height: 70px;
     padding-left: 80px;
+    font-size: 18px;
     font-family: "effrabold";
     &:hover {
         background: #e1e3e5;
@@ -1655,6 +1660,10 @@ body {
     }
 }
 @include breakpoint(1024) {
+    .intro-wrapper {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
     .header__top-line {
         .version {
             margin-right: 10px;
@@ -1747,7 +1756,12 @@ body {
     }
 }
 @include breakpoint(768) {
+    .intro-wrapper {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
     .header {
+
         .version {
             font-size: 0;
         }

@@ -258,7 +258,7 @@
 	}
 }
 .department_block {
-	width: 283px;
+	width: 291px;
 	height: 280px;
 	padding: 28px 20px 66px 20px;
 	display: inline-block;
@@ -274,7 +274,7 @@
 		repeat: no-repeat;
 	}
 	&.big{
-		width: 588px;
+		width: 584px;
 		padding: 20px 20px 66px 20px;
 		.department_title{
 			line-height: 1;
@@ -398,6 +398,10 @@
 			font-size: 28px;
 			line-height: 1.25;
 			margin-bottom: 5px;
+		}
+		.depertment_text,
+		.department_link {
+			opacity: 1;
 		}
 	}
 }
