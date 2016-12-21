@@ -106,6 +106,8 @@ $( document ).ready(function() {
         }
     });
 
+
+
     $('.after-plus .city-link').click(function(event){
         event.preventDefault();
         $(this).next().slideToggle();
@@ -177,12 +179,26 @@ $( document ).ready(function() {
         }
 
         // arrow-up
-            if($(window).scrollTop() >= (windowHeight * 0.8 )){
-                $(".arrow-up").fadeIn('fast');
+        if($(window).scrollTop() >= (windowHeight * 0.8 )){
+            $(".arrow-up").fadeIn('fast');
+        }
+        else{
+            $(".arrow-up").fadeOut('fast');
+        }
+
+        // фиксировання плажка хедера при 480 и меньше 
+        if($(window).scrollTop() > signInPosition){
+            if(windowSize<=480) {
+                $('.header__top-line').addClass('header__top-line--fixed');
+                $('.sidenav').css({
+                    'top': $('.header__top-line').outerHeight(),
+                    'margin-top': '0'
+                });
             }
-            else{
-                $(".arrow-up").fadeOut('fast');
-            }
+        }
+        else{
+            $('.header__top-line').removeClass('header__top-line--fixed');
+        } 
 
     });
 

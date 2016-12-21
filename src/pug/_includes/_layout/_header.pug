@@ -20,6 +20,8 @@ header.header
                         img(src="img/icons/close-l.png", alt="")
                 #mySidenav.sidenav
                     ul.sidenav-list
+                        //- .sidenav--active
+                        //- класс активной ссылки
                         li.sidenav-item
                             a(href='#').lvlin Услуги и цены
                             ul.sub-list
@@ -36,7 +38,7 @@ header.header
                                         li
                                             a(href="#")
                                                 | КТ
-                                        li.active
+                                        li
                                             a(href="#")
                                                 | ПЭТ/КТ
                                         li
@@ -93,7 +95,7 @@ header.header
                         li.sidenav-item
                             a(href='#') О нас
                         li.sidenav-item
-                            a(href='#').sidenav--active Новости
+                            a(href='#') Новости
                         li.sidenav-item
                             a(href='#') Отзывы
                         li.sidenav-item
