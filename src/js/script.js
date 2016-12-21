@@ -2,12 +2,26 @@ console.log('hello from script.js');
 
 var windowSize = document.documentElement.clientWidth;
 var windowHeight = document.documentElement.clientHeight;
-
+var signIn
+    if(windowSize<=480) {
+        signIn = $('.header__top-line');
+    } else {
+        signIn = $('.header__sign-in');
+    }
+    signInPosition += signIn.outerHeight();
+var signInPosition = signIn.offset().top;
 $( document ).ready(function() {
 
     $(window).on('resize', function(){
+
         windowSize = document.documentElement.clientWidth;
         windowHeight = document.documentElement.clientHeight;
+        if(windowSize<=480) {
+            signIn = $('.header__top-line');
+        } else {
+            signIn = $('.header__sign-in');
+        }
+
     });
     $('.adress-title').click(function(){
         $('.adress-wrap').toggleClass('adress-wrap--active');
@@ -150,33 +164,54 @@ $( document ).ready(function() {
         return false;
     });
 
-    var signIn = $('.header__sign-in');
-    var signInPosition = signIn.offset().top;
-    signInPosition += signIn.outerHeight();
+
 
     $(window).on('scroll', function(){
 
         // меняет позицию сайдбара и верней плашки в зависисмости от скролла
         if($(window).scrollTop() > signInPosition){
-            $('.header__sign-in')
-            .addClass('header__sign-in--fixed');
-            if ($('.sidenav').hasClass('active-class') && windowSize >480) {
-                $('.header__sign-in').addClass('ml-320');
+            if (windowSize >480) {
+                $('.header__sign-in')
+                .addClass('header__sign-in--fixed');
+                if ($('.sidenav').hasClass('active-class')) {
+                    $('.header__sign-in').addClass('ml-320');
+                }
+                $('.sidenav').css({
+                    'top': $('.header__sign-in').outerHeight(),
+                    'margin-top': '0'
+                });
+                $('.signIn-form-tr').css({
+                    'top':'70px',
+                    'max-height': windowHeight - 70 + 'px'})
             }
-            $('.sidenav').css({
-                'top': $('.header__sign-in').outerHeight(),
-                'margin-top': '0'
-            });
-            $('.signIn-form-tr').css({
-                'top':'70px',
-                'max-height': windowHeight - 70 + 'px'})
-        }
-        else{
+            if(windowSize<=480) {
+                $('.header__top-line').addClass('header__top-line--fixed');
+                $('.sidenav').css({
+                    'top': $('.header__top-line').outerHeight(),
+                    'margin-top': '0'
+                });
+            }
+        } else{
             $('.header__sign-in').removeClass('header__sign-in--fixed');
             $('.sidenav').removeAttr('style');
             $('.signIn-form-tr').css('top','50px');
             $('.header__sign-in').removeClass('ml-320');
+            // убираем класс у плашки при 480
+            $('.header__top-line').removeClass('header__top-line--fixed');
         }
+        // фиксировання плажка хедера при 480 и меньше
+        // if($(window).scrollTop() > signInPosition){
+        //     if(windowSize<=480) {
+        //         $('.header__top-line').addClass('header__top-line--fixed');
+        //         $('.sidenav').css({
+        //             'top': $('.header__top-line').outerHeight(),
+        //             'margin-top': '0'
+        //         });
+        //     }
+        // }
+        // else{
+        //     $('.header__top-line').removeClass('header__top-line--fixed');
+        // }
 
         // arrow-up
         if($(window).scrollTop() >= (windowHeight * 0.8 )){
@@ -186,19 +221,6 @@ $( document ).ready(function() {
             $(".arrow-up").fadeOut('fast');
         }
 
-        // фиксировання плажка хедера при 480 и меньше 
-        if($(window).scrollTop() > signInPosition){
-            if(windowSize<=480) {
-                $('.header__top-line').addClass('header__top-line--fixed');
-                $('.sidenav').css({
-                    'top': $('.header__top-line').outerHeight(),
-                    'margin-top': '0'
-                });
-            }
-        }
-        else{
-            $('.header__top-line').removeClass('header__top-line--fixed');
-        } 
 
     });
 
