@@ -1,13 +1,13 @@
 console.log('hello from script.js');
 
 var windowSize = document.documentElement.clientWidth;
+var windowHeight = document.documentElement.clientHeight;
+
 $( document ).ready(function() {
-    
-
-
 
     $(window).on('resize', function(){
         windowSize = document.documentElement.clientWidth;
+        windowHeight = document.documentElement.clientHeight;
     });
     $('.adress-title').click(function(){
         $('.adress-wrap').toggleClass('adress-wrap--active');
@@ -167,7 +167,7 @@ $( document ).ready(function() {
             });
             $('.signIn-form-tr').css({
                 'top':'70px',
-                'max-height':document.documentElement.clientHeight - 70 + 'px'})
+                'max-height': windowHeight - 70 + 'px'})
         }
         else{
             $('.header__sign-in').removeClass('header__sign-in--fixed');
@@ -175,9 +175,9 @@ $( document ).ready(function() {
             $('.signIn-form-tr').css('top','50px');
             $('.header__sign-in').removeClass('ml-320');
         }
-    
+
         // arrow-up
-            if($(window).scrollTop() >= 400){
+            if($(window).scrollTop() >= (windowHeight * 0.8 )){
                 $(".arrow-up").fadeIn('fast');
             }
             else{
@@ -203,13 +203,12 @@ $( document ).ready(function() {
 $('.about_more-link').on("click", function(event) {
     event.preventDefault();
     var span = $(this).find('span:first-child'),
-        text=$(this).data('text');
+        dataText = $(this).data('text');
      $('.about_content').toggleClass('about_full');
      $(this).toggleClass('opened');
      // меняем текст из дата атрибута
-     span.data('text',span.text());  // ставим в дата атрибут текст спана
-     span.text(text); // а в спан текст из дата атребута
-
+     $(this).data("text", span.text() );  // ставим в дата атрибут текст спана
+     span.text(dataText); // а в спан текст из дата атребута
         return false;
 });
 
@@ -224,5 +223,5 @@ $('.about_more-link').on("click", function(event) {
     // Блок "запишитесь"
     $('.tel_mask').mask("+9 (999) 999-99-99");
 
-    
+
 }); // конец document.ready

@@ -1428,7 +1428,8 @@ body {
         }
     }
 }
-.arrow-up {
+.arrow-up{
+    display: none;
     cursor: pointer;
     position: fixed;
     bottom: 50px;
