@@ -311,6 +311,7 @@
 
 	}
 	.department_link{
+		@include border-radius(0px);
 		position: absolute;
 		left: 20px;
 		bottom: 20px;

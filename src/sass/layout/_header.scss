@@ -1040,7 +1040,7 @@ body {
     }
     .logo {
         &-wrap {
-            margin-right: 131px;
+            margin-right: 111px;
         }
         &-img {
             width: 235px;
@@ -1104,6 +1104,7 @@ body {
             color: #fff;
             @extend .btn-red;
             background: #ed1b2f;
+            padding: 14px 41px;
             font-size: 12px;
             &:hover {
                 background: #f14959;
@@ -1136,6 +1137,12 @@ body {
         }
         .signUp-wrap {
             display: inline-block;
+            margin-top: 3px;
+        }
+        .phone-wrap {
+            .time {
+                color: rgba(255, 255, 255, .34) !important;
+            }
         }
         padding: 0;
         a,
@@ -1162,7 +1169,7 @@ body {
         }
     }
     .logo-wrap {
-        margin-right: 130px;
+        margin-right: 111px;
     }
 }
 
@@ -1256,6 +1263,9 @@ body {
                             bottom: 0;
                             margin: auto;
                         }
+                        &:hover {
+                            color: #004986;
+                        }
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -1268,6 +1278,7 @@ body {
                 font-size: 14px;
                 p {
                     margin-bottom: 25px;
+                    color: #353535;
                 }
                 a {
                     display: block;
@@ -1428,7 +1439,7 @@ body {
         }
     }
 }
-.arrow-up{
+.arrow-up {
     display: none;
     cursor: pointer;
     position: fixed;
@@ -1458,163 +1469,6 @@ body {
     }
     span {
         font-size: 10px;
-    }
-}
-@include breakpoint(1024) {
-    .header__top-line {
-        .version {
-            margin-right: 10px;
-        }
-    }
-    .header__sign-in--fixed {
-        .menu-toggle {
-            display: block;
-        }
-    }
-    .header__popup-wrap {
-        .container-popup {
-            width: 940px;
-            position: relative;
-            padding: 20px 25px 40px;
-        }
-        .popup-content {
-            ul {
-                columns: 150px 5;
-            }
-        }
-    }
-    .header__menu_list {
-        display: none;
-    }
-    .menu-toggle {
-        display: block;
-        margin-right: 20px;
-    }
-    .search-input,
-    .version-wrap {
-        display: none;
-    }
-    .header__sign-in {
-        .logo-wrap {
-            margin-right: 262px;
-        }
-        .nav {
-            display: none;
-        }
-        &--fixed {
-            .container {
-                margin: 0;
-            }
-            .logo-wrap {
-                display: none;
-            }
-            .menu-toggle {
-                margin-right: 384px;
-                display: block;
-                padding: 15px 19px 11px 3px;
-                font-size: 16px;
-            }
-        }
-    }
-    .intro-wrapper {
-        .tabs-list {
-            float: left;
-            width: 300px;
-            ul {
-                .tabs-item--active {
-                    width: 300px;
-                }
-                li {
-                    float: none;
-                    margin-bottom: 10px;
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-        .tabs-content {
-            float: right;
-            width: 640px;
-            .mrt {
-                padding: 20px 35px;
-                .mrt-list {
-                    margin-right: 0;
-                    ul {
-                        columns: 1 320px;
-                    }
-                }
-                .mrt-dscr {
-                    width: 240px;
-                    float: right;
-                }
-            }
-        }
-    }
-}
-@include breakpoint(768) {
-    .header {
-        .version {
-            font-size: 0;
-        }
-    }
-    .header__popup-wrap {
-        .container-popup {
-            width: 728px;
-            position: relative;
-            padding: 20px 15px;
-        }
-        .popup-content {
-            ul {
-                columns: 150px 5;
-            }
-        }
-    }
-    .header__sign-in {
-        .logo-wrap {
-            margin-right: 83px;
-        }
-        .phone-wrap {
-            margin-right: 10px;
-            margin-left: -3px;
-        }
-        &--fixed {
-            .menu-toggle {
-                margin-right: 205px;
-            }
-        }
-    }
-    .header__popup-signUp {
-        .signUp-title {
-            font-size: 28px;
-            text-align: center;
-        }
-        width: 370px;
-        .container-short {
-            width: 290px;
-            padding: 45px 0;
-        }
-    }
-    .intro-wrapper {
-        .tabs-content {
-            float: right;
-            width: 428px;
-            .mrt {
-                .mrt-list {
-                    margin-right: 0;
-                    margin-bottom: 20px;
-                    ul {
-                        columns: 1 320px;
-                    }
-                }
-                .mrt-dscr {
-                    width: 100%;
-                    a {
-                        width: 280px;
-                    }
-                }
-            }
-        }
     }
 }
 .signIn-form-tr {
@@ -1777,6 +1631,173 @@ body {
         }
     }
 }
+@include breakpoint(1024) {
+    .header__top-line {
+        .version {
+            margin-right: 10px;
+        }
+    }
+    .header__sign-in--fixed {
+        .menu-toggle {
+            display: block;
+        }
+    }
+    .header__popup-wrap {
+        .container-popup {
+            width: 940px;
+            position: relative;
+            padding: 20px 25px 40px;
+        }
+        .popup-content {
+            ul {
+                columns: 150px 5;
+            }
+        }
+    }
+    .header__menu_list {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+    .search-input,
+    .version-wrap {
+        display: none;
+    }
+    .header__sign-in {
+        .logo-wrap {
+            margin-right: 242px;
+        }
+        .nav {
+            display: none;
+        }
+        &--fixed {
+            .container {
+                margin: 0;
+            }
+            .logo-wrap {
+                display: none;
+            }
+            .menu-toggle {
+                margin-right: 364px;
+                display: block;
+                padding: 15px 19px 11px 3px;
+                font-size: 16px;
+            }
+        }
+    }
+    .intro-wrapper {
+        .tabs-list {
+            float: left;
+            width: 300px;
+            ul {
+                .tabs-item--active {
+                    width: 300px;
+                }
+                li {
+                    float: none;
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .tabs-content {
+            float: right;
+            width: 640px;
+            .mrt {
+                padding: 20px;
+                .mrt-list {
+                    margin-right: 0;
+                    ul {
+                        columns: 1 320px;
+                    }
+                }
+                .mrt-dscr {
+                    width: 240px;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+@include breakpoint(768) {
+    .header {
+        .version {
+            font-size: 0;
+        }
+        .location-wrap {
+            margin-right: 0;
+        }
+    }
+    .header__popup-wrap {
+        .container-popup {
+            width: 728px;
+            position: relative;
+            padding: 20px 15px;
+        }
+        .popup-content {
+            ul {
+                columns: 150px 5;
+            }
+        }
+    }
+    .header__sign-in {
+        .logo-wrap {
+            margin-right: 114px;
+            .logo-img {
+                width: 184px;
+                height: 31px;
+            }
+        }
+        .phone-wrap {
+            margin-right: 10px;
+            margin-left: -3px;
+        }
+        &--fixed {
+            .menu-toggle {
+                margin-right: 175px;
+            }
+            .phone-wrap {
+                margin-right: 20px;
+            }
+        }
+    }
+    .header__popup-signUp {
+        .signUp-title {
+            font-size: 28px;
+            text-align: center;
+        }
+        width: 370px;
+        .container-short {
+            width: 290px;
+            padding: 45px 0;
+        }
+    }
+    .intro-wrapper {
+        .tabs-content {
+            float: right;
+            width: 428px;
+            .mrt {
+                .mrt-list {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                    ul {
+                        columns: 1 320px;
+                    }
+                }
+                .mrt-dscr {
+                    width: 100%;
+                    a {
+                        width: 280px;
+                    }
+                }
+            }
+        }
+    }
+}
 @include breakpoint(480) {
     .sidenav {
         left: -100%;
@@ -1861,9 +1882,21 @@ body {
         }
         .signUp-wrap {
             display: none;
+            width: 65%;
+            .enroll_link {
+                padding: 10px 20px;
+                margin-top: 5px;
+                display: block;
+            }
         }
         .logo-wrap {
             margin-right: 0;
+            width: 100%;
+            text-align: center;
+            .logo-img {
+                width: 235px;
+                height: 40px;
+            }
         }
         .menu-toggle {
             margin-right: 0;
@@ -2006,8 +2039,20 @@ body {
             padding: 0;
             .full {
                 font-size: 0;
-                padding: 18px 18px 9px 19px;
+                padding: 24px 19px 13px 18px;
             }
+        }
+        .signUp-wrap {
+            .enroll_link {
+                padding: 14px 20px;
+                margin-top: 1px;
+            }
+        }
+        .signUp-tel{
+            width: 40px;
+            height: 40px;
+            margin-top: 4px;
+            line-height: 40px;
         }
     }
     .active-class {
